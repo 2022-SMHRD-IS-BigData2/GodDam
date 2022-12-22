@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.dao.DayDetailDAO">
+
+
+<select id="lastDay" resultType="com.smhrd.entity.DayDetailDTO" parameterType="com.smhrd.entity.DamDTO">
+SELECT DAM_NUM,
+D_DATE,
+D_LEVEL,
+D_VOW,
+D_VOW_RATE,
+D_INFLOW,
+D_TTL_OUTFLOW
+  FROM (
+         SELECT DAM_NUM,
+D_DATE,
+D_LEVEL,
+D_VOW,
+D_VOW_RATE,
+D_INFLOW,
+D_TTL_OUTFLOW
+              , RANK() OVER(ORDER BY d_Date DESC) AS rn
+           FROM tb_d_${dam_name}
+       )
+ WHERE rn = 1
+</select>
+
+
+
+
+
+
+
+
+
+</mapper>
