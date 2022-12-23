@@ -25,8 +25,11 @@ D_TTL_OUTFLOW
  WHERE rn = 1
 </select>
 
-
-
+<select id="selectdate" resultType="com.smhrd.entity.DayDetailDTO" parameterType="com.smhrd.entity.DayDetailDTO">
+select * from tb_d_${dam_name}
+WHERE d_date BETWEEN TO_DATE('${startDate}','YYYY-MM-DD HH:MI:SS') AND TO_DATE('${endDate}','YYYY-MM-DD HH:MI:SS') 
+</select>
+<!-- 1223 우종빈, 기간 선택용 select sql 작성 -->
 
 
 

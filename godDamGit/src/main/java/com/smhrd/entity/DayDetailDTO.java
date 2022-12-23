@@ -15,5 +15,8 @@ public class DayDetailDTO {
 	private double d_vow_rate;
 	private double d_inflow;
 	private double d_ttl_outflow;
+	private String dam_name;
+	private String startDate;
+	private String endDate; //1223(18~20) 우종빈, 기간 선택용 field 선언
 
 }

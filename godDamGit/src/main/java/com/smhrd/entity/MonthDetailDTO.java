@@ -16,6 +16,9 @@ public class MonthDetailDTO {
 	private double m_vow_rate;
 	private double m_inflow;
 	private double m_ttl_outflow;
+	private String dam_name;
+	private String startDate;
+	private String endDate; //1223(18~20) 우종빈, 기간 선택용 field 선언
 
 
 }

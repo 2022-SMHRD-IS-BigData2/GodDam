@@ -14,7 +14,9 @@ import javax.servlet.http.HttpSession;
 //
 import com.smhrd.controller.Controller;
 import com.smhrd.controller.GoMainCon;
+import com.smhrd.controller.LastDamCon;
 import com.smhrd.controller.MapDamCon;
+import com.smhrd.controller.SelectDayCon;
 //
 @WebServlet("*.do") // .do로 끝나는 모든 요청을 받아온다.
 public class FrontController extends HttpServlet {
@@ -37,6 +39,8 @@ public class FrontController extends HttpServlet {
 //		// 새로운 해시맵 생성
 		handlerMapping = new HashMap<>();
 		handlerMapping.put("/DamList.do",new MapDamCon());
+		handlerMapping.put("/LastDam.do",new LastDamCon());
+		handlerMapping.put("/SelectDay.do", new SelectDayCon());// 1223 우종빈, ajax통신용 해시맵 객체 추가
 	
 //		
 //		// .put(Key,Value);

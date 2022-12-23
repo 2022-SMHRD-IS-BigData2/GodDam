@@ -101,7 +101,16 @@
             </div>
         
             <div class="part2 scrllap_ap">
-        
+				<select name="blood" id="damName">
+            		<option value="soyang">소양강댐</option>
+            		<option value="chungju">충주댐</option>
+            		<option value="hoengseong">횡성댐</option>
+            		<option value="daecheong">대청댐</option>
+        		</select>
+				<input type="date" id="startDate">
+				<input type="date" id="endDate">
+				<input type="submit" id="submit">
+        <%--1223 우종빈 댐, 기간 선택 태그 만듬 --%>
             </div>
         </div>
     </section>
@@ -204,7 +213,7 @@
 
 
     <script type="text/javascript" src="assets/script.js"></script>
-
+	<script type="text/javascript" src="./assets/ajax.js"></script>
 </body>
 
 </html>
