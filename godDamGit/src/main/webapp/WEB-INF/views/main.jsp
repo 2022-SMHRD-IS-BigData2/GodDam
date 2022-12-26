@@ -72,7 +72,7 @@
             <div class="subhead">
                 <!-- 왼쪽 홈버튼 -->
                 <nav class="sub_menu_left">
-                <a href="#" class="arp2"><i class="fa-solid fa-house"></i><span class="lhtext">HOME</span> </a>
+                <a href="goMain.do" class="arp2"><i class="fa-solid fa-house"></i><span class="lhtext">HOME</span> </a>
                 </nav>
             
                 <!-- 오른쪽 메뉴 -->
@@ -80,7 +80,7 @@
                 <a href="#" class="arp"><span>수칙</span> </a>
                 <a href="#" class="arp"><span>상세지도</span> </a>
 			    <a href="#" class="arp">상세정보 </a>
-			    <a href="#" class="arp">방명록 </a>
+			    <a href="GoBoard.do" class="arp">방명록 </a>
                 </nav>
             </div> <!-- .subhead -->
         </div> <!-- .head -->

@@ -2,6 +2,7 @@ package com.smhrd.frontController;
 //
 import java.io.IOException;
 import java.util.HashMap;
+
 //
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -10,9 +11,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 //
 import com.smhrd.controller.Controller;
+import com.smhrd.controller.GoBoardCon;
+import com.smhrd.controller.GoBoardEditCon;
+import com.smhrd.controller.GoBoardViewCon;
+import com.smhrd.controller.GoBoardWriteCon;
 import com.smhrd.controller.GoMainCon;
 import com.smhrd.controller.GoWindowCon;
 import com.smhrd.controller.LastDamCon;
@@ -52,6 +57,10 @@ public class FrontController extends HttpServlet {
 //		handlerMapping.put("/goWriteBoard.do", new GoWriterBoardCon());
 //		handlerMapping.put("/goView.do", new GoViewCon());
 //
+		handlerMapping.put("/GoBoard.do", new GoBoardCon());
+		handlerMapping.put("/GoEdit.do", new GoBoardEditCon());
+		handlerMapping.put("/GoWrite.do", new GoBoardWriteCon());
+		handlerMapping.put("/GoView.do", new GoBoardViewCon());
 //		//===================
 	}
 //	
