@@ -260,9 +260,13 @@
     <!-- footer 밑 자막 -->
     <footer class="foo"><div><marquee>"여기를 보시라구요....글씨가 커졌습니까?"</marquee></div></footer>
 
-
-
-
+<%--1226 김민석: 스크롤 상단 버튼 추가 --%>
+	<div style="position:fixed; bottom:55px; right:20px; z-index:99;"> 
+	<a href="#scrollap" id="boxicon">
+ 	 <i class="fa-regular fa-circle-up" style="font-size: xxx-large; color:black;"></i>
+	</a>	
+	</div>
+<%--1226 김민석: 스크롤 상단 버튼 추가 --%>
 
 
     <script type="text/javascript" src="./assets/script.js"></script>

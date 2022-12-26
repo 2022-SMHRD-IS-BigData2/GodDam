@@ -624,8 +624,19 @@ $('body').on('keydown', function (event) {
  // 1초: 1000
 
 
-
-
+// 1226 김민석 : 스크롤 상단 버튼 추가 js 
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 300){
+		$('#boxicon').show();
+	} else{
+		$('#boxicon').hide();
+	}
+});
+$('#boxicon').click(function(){
+	$('html, body').animate({scrollTop:0},400);
+	return false;
+});
+// 1226 김민석 : 스크롤 상단 버튼 추가 js 
 
 
 
