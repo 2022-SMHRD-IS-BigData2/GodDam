@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 //
 import com.smhrd.controller.Controller;
 import com.smhrd.controller.GoMainCon;
+import com.smhrd.controller.GoWindowCon;
 import com.smhrd.controller.LastDamCon;
 import com.smhrd.controller.MapDamCon;
 import com.smhrd.controller.SelectDayCon;
@@ -45,6 +46,7 @@ public class FrontController extends HttpServlet {
 //		
 //		// .put(Key,Value);
 		handlerMapping.put("/goMain.do", new GoMainCon());
+		handlerMapping.put("/goWindow.do", new GoWindowCon()); //1226 우종빈, windowChart 추가
 //		handlerMapping.put("/goSuccess.go", new GosuccessCon());
 //		handlerMapping.put("/goBoard.do", new GoBoardCon());
 //		handlerMapping.put("/goWriteBoard.do", new GoWriterBoardCon());

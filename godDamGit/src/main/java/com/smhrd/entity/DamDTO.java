@@ -11,5 +11,6 @@ public class DamDTO {
 	private String dam_name;
 	private String dam_loc;
 	private String admin_id;
+	private String dam_namekor;
 
 }

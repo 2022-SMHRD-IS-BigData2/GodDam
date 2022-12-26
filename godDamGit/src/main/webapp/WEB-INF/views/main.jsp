@@ -125,6 +125,7 @@
         <div name="main_part ">
     
             <div class="part1 scrllap_ap">
+            <div id="map" style="width:90%;height:800px;"></div><!-- 1226 우종빈 -->
             </div>
         
             <div class="part2 scrllap_ap">
@@ -239,8 +240,10 @@
 
 
 
-    <script type="text/javascript" src="assets/script.js"></script>
+    <script type="text/javascript" src="./assets/script.js"></script>
 	<script type="text/javascript" src="./assets/ajax.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f1f4c8e6a3afcf5f5bfec0f271a2d10"></script>
+	<script type="text/javascript" src="./assets/map.js"></script> <!--1226 우종빈-->
 </body>
 
 </html>
