@@ -166,13 +166,14 @@
 
     </section> 
 
-    <section class="section4 scrllap_ap">
+      <section class="section4 scrllap_ap">
         <!-- 메인파트 아랫공간때문에 따로 css 추가됨 -->
         <div name="main_part_last">
         <div class="part1_in scrllap_ap">
             
             <div class="page_top_in">
-            <div class="page_num_in bigName">04</div>
+            <div class="page_num_in bigName">04
+            </div>
             <div class="page_title_in bigName"> picture
             </div>
 
@@ -182,7 +183,7 @@
              <div class="box_in">
                 <div class="card_in">
                     <div class="imgBx_in">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMXOnlGaUlhGc-eZw9HYnnnHCT44JBNaPGCA&usqp=CAU"
+                        <img id="b" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMXOnlGaUlhGc-eZw9HYnnnHCT44JBNaPGCA&usqp=CAU"
                             alt="images">
                     </div>
                     <div class="details_in">
@@ -191,7 +192,11 @@
                 </div>
             </div> 
 
-
+            <!-- 사진 밑 버튼 -->
+            <span class="icon_name_in" id="ab">
+                <i class="fa-sharp fa-solid fa-circle"></i>
+                <i class="fa-sharp fa-solid fa-circle-dot"></i>
+                <i class="fa-sharp fa-solid fa-circle"></i></span>
         
         </div>
         <div class="part2_in scrllap_ap">
