@@ -227,20 +227,49 @@ body{
     
   }
 /* 큰제목 옆 날씨박스 */
+/* 날씨박스 아이콘 - 형철 */
+.weathericon{
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 90%;
+    line-height: 0px;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 0px;
+    font-size: 0px;
+}  
+ 
+ 
+ /* 날씨박스 텍스트 - 형철 */
+.weathertext{
+    position: relative;
+    float: right;
+    width: 70%;
+    height: 90%;
+    line-height: 20px;
+    margin: 0px 0px 0px 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 10px;
+    font-size: 15px;
+} 
+
+  
+/* 큰제목 옆 날씨박스 - 형철*/
 .weather{
     position: relative;
-    width: 12%;
+      width: 200px;
+   height: 100px;
     left: 10px;
     border: 3px double #2f2f2f;
     padding: 10px 15px 10px 15px;
     line-height: 20px;
     display: inline-block;
     margin: 0 50px 20px -360px;
-
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 700;
+    font-weight: 700px;
     font-size: 15px;
-
+   background: #c2dfff;
 
 }
 

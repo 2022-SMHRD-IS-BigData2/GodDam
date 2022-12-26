@@ -52,9 +52,17 @@
             <div class="headerobjectswrapper">
                 <!-- 날씨정보 -->
                 <div class="weather">
-                    <span style="font-style: italic;">날씨 아이콘</span><br>
-                    <span>날씨정보 Wind: 7km/h SSE; Ther: 21°C; Hum: 82%</span>
+                
+                   <div class = "weathericon"> </div>
+                   <div class = "weathertext">
+                       <div class = "weatherarea"> </div>
+                       <div class = "weatherdes"> </div>
+                         <div class = "weatherhot"> </div>
+                       <div class = "weatherwind"> </div>
+                       <div class = "weathercloud"> </div>
+                  </div>     
                 </div>
+
 
                 <!-- 큰제목 -->
                 <header class="bigName">GWANG JU WATER
@@ -259,6 +267,7 @@
 
     <script type="text/javascript" src="./assets/script.js"></script>
 	<script type="text/javascript" src="./assets/ajax.js"></script>
+	<script type="text/javascript" src="./assets/ajax2.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f1f4c8e6a3afcf5f5bfec0f271a2d10"></script>
 	<script type="text/javascript" src="./assets/map.js"></script> <!--1226 우종빈-->
 </body>
