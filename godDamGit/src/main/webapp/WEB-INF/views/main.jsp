@@ -44,7 +44,7 @@
 </head>
 <body >
     <!-- 세션1 시작 -->
-    <div class="scrollap">
+    <div id="scrollap"> <%--1226 김민석: class -> id로 변경 --%>
     
 
         <div class="head scrllap_ap">
