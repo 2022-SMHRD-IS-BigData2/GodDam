@@ -27,11 +27,9 @@
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 	<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
-	<link rel="stylesheet" href="/assets/style.css">  
 	<%-- 1223 김민석: 스크립트,css 경로&링크 추가 --%>
 
 </head>
-	<script src="/assets/script.js"></script> <%-- 1223 김민석: 스크립트 경로 추가  --%>
 <body >
     <!-- 세션1 시작 -->
     <div class="scrollap">
