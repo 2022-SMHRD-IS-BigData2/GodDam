@@ -28,6 +28,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 	<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
 	<%-- 1223 김민석: 스크립트,css 경로&링크 추가 --%>
+	
+	<%-- 1226 우종빈: map css추가 --%>
+	     <style>
+		.overlaybox {position:relative;width:130px;height:100px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/box_movie.png') no-repeat;padding:15px 10px;}
+		.overlaybox div, ul {overflow:hidden;margin:0;padding:0;}
+		.overlaybox li {list-style: none;}
+		.overlaybox .boxtitle {color:#fff;font-size:16px;font-weight:bold;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png') no-repeat right 120px center;margin-bottom:8px;}
+		.overlaybox ul {width:130px;}
+		.overlaybox li {position:relative;margin-bottom:2px;background:#FFFFFF;padding:4px 10px;color:#aaabaf;line-height: normal;}
+		.overlaybox li span {display:inline-block;}
+	</style>
+    
 
 </head>
 <body >
