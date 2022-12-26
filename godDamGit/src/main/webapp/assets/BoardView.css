@@ -1,0 +1,226 @@
+.board_wrap {
+    display: block;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    height: 600px;
+    background-color: rgba(127, 255, 212, 0);
+    margin-top: 80px;
+}
+
+.board_title {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    float: left;
+    background-color: rgba(255, 228, 196, 0);
+    text-align: center;
+}
+
+.board_view {
+    position: relative;
+    height:85%;
+    width: 100%;
+    float: left;
+    background-color: rgba(67, 72, 62, 0);
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(185, 129, 198, 0.836);
+    border-top: 5px solid rgb(53, 53, 53);
+    border-bottom: 5px solid rgb(53, 53, 53);
+    color: rgb(62, 62, 62);
+    vertical-align: middle;
+}
+
+.info {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(143, 188, 143, 0);
+    float: left;
+    border-bottom: 3px solid rgb(62, 62, 62);
+}
+
+.info > div {
+    float: left;
+    position: relative;
+    width:25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.a1a {
+    float: left;
+    position: relative;
+    width: 29%;
+    height: 100%;
+    background-color: rgba(147, 133, 133, 0);
+    text-align: center;
+    border-left: 2px solid rgb(62, 62, 62);
+    border-right: 2px solid rgb(62, 62, 62);
+}
+
+
+.a2a {
+    position: relative;
+    width:70%;
+    height: 100%;
+    margin-left: 30%;
+    background-color: rgba(0, 0, 253, 0);
+    text-align: center;
+}
+
+.a2a2 {
+    position: relative;
+    width:70%;
+    height: 100%;
+    margin-left: 29%;
+    background-color: rgba(0, 0, 253, 0);
+    text-align: center;
+    border-right: 2px solid rgb(62, 62, 62);
+
+}
+
+.page {
+    position: relative;
+    float: left;
+    height: 400px;
+    padding: 20px;
+    width: 95.5%;
+    border-bottom: 5px solid rgb(62, 62, 62);
+    transform: ease-in-out 2s;
+
+}
+
+.on {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 13%;
+    font-weight: 600;
+    
+    
+}
+
+.bt_wrap {
+    margin-top: -50px;
+    text-align: center;
+    width: 100% !important;
+
+    position: relative;
+    width: 80px;
+    height: 50px;
+    background-color: rgba(222, 184, 135, 0);
+
+    display: flex;
+    
+}
+
+.bt_wrap2 {
+    margin-top: -50px;
+    text-align: center;
+    font-size: 0;
+
+    position: relative;
+    width: 80px;
+    height: 50px;
+    background-color: rgba(222, 184, 135, 0);
+
+    display: flex;
+    left: 91.5%;
+
+}
+
+.on2 {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 13%;
+    font-weight: 600;
+    right: 0%;
+    position: relative;
+
+    
+    
+}
+
+.headline1{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+
+}
+
+.headline2{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+
+}
+
+
+.bigName {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    display: inline-block;
+/* line-height: 72px; */    
+
+}
+
+.arp3{
+    text-decoration: none;
+    color: var(--body-color);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:18px;
+    font-weight: 600;
+}
+
+.arp3:hover {
+    border-top: rgb(0, 0, 0) 10px solid;
+    border-bottom: rgb(0, 0, 0) 10px solid;
+    border-left: rgb(0, 0, 0) 2px solid;
+    border-right: rgb(0, 0, 0) 2px solid;
+    width: 100%;
+  
+    transition: .5s ease-in-out;
+    color: white !important;
+    background: rgb(28, 34, 47);
+}
+
+.headline3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.left_img {
+    width: 44.5%;
+    height: 100%;
+    border-right: 2px solid;
+    display: block;
+    position: relative;
+    float: left;
+    padding-right: 5px;
+    transform: 2s;
+}
+.spacing {
+    width: 2.5%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
