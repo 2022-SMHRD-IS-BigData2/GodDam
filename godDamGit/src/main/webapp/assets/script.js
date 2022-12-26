@@ -579,7 +579,49 @@ $.ajax({
 /* 1223 김민석 차트 js 추가 */
 
 
+/* 221226 최일남 js 사진페이지 버튼 */
 
+var ak1 = '<i class="fa-sharp fa-solid fa-circle-dot"></i> <i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle"></i>'
+var ak2 = '<i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle-dot"></i>'
+var ak3 = '<i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle-dot"></i> <i class="fa-sharp fa-solid fa-circle"></i>'
+
+var testimg = 'https://i.pinimg.com/564x/4c/fc/b0/4cfcb0cb3a4a4a18656c4fb7e1481f35.jpg'
+var testimg2 = 'https://i.pinimg.com/564x/a5/9b/a9/a59ba9009b7a9337074795578cddc6e8.jpg'
+
+var cat = document.querySelector('#b')
+
+var testlist = [testimg, testimg2]
+var templist = [ak1, ak2, ak3]
+
+$('body').on('keydown', function (event) {
+
+  console.log(event);
+
+  function movelr(e) {
+    if (e == 37) {
+      $('#ab').html(templist[0])
+      cat.setAttribute('src',testlist[0])
+    }else if (e == 39) {
+      $('#ab').html(templist[1])
+      cat.setAttribute('src',testlist[1])
+
+    }
+  }
+
+  function resetc() {
+    $('#ab').html(templist[2])
+  }
+  
+
+
+  movelr(event.keyCode);
+  setTimeout(resetc,0200);
+
+
+})
+
+
+ // 1초: 1000
 
 
 
