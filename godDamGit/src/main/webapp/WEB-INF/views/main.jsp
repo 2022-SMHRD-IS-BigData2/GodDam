@@ -22,12 +22,16 @@
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/c8ca5d214a.js" crossorigin="anonymous"></script>
-
-    
-
+	
+	<%-- 1223 김민석: 스크립트,css 경로&링크 추가 --%>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+	<link rel="stylesheet" href="/assets/style.css">  
+	<%-- 1223 김민석: 스크립트,css 경로&링크 추가 --%>
 
 </head>
-
+	<script src="/assets/script.js"></script> <%-- 1223 김민석: 스크립트 경로 추가  --%>
 <body >
     <!-- 세션1 시작 -->
     <div class="scrollap">
@@ -74,6 +78,13 @@
         <section class="section1">
         <div name="main_part">
             <div class="part1 scrllap_ap">
+            <%-- 1223 김민석: 메인 차트 추가 --%>
+              	<div id="tit1">주암댐 저수율 전년도 비교</div>
+                	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    				<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    				<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+   				<div id="chartdiv"></div>
+   			<%-- 1223 김민석: 메인 차트 추가 --%>
             </div>
         
             <div class="part2">
@@ -81,12 +92,30 @@
                 </div>
         
                 <div class="collumn2 scrllap_ap">
+                <%-- 1223 김민석: 서브 차트2 추가 --%>
+                    <div class="chart1">
+                      <div id="tit2">주암댐(%)</div>
+   						<div class="wrapper">
+     				   		<canvas id='ctx' class="canvas"></canvas>
+      					<div class="label">text</div>
+      				 </div>
+    				</div>
+    				<%-- 1223 김민석: 서브 차트2 추가 --%>
                 </div>
 
                 <div class="collumn3">
+                    <%-- 1223 김민석: 서브 차트3 추가 --%>
+                    <main class="containers">
+  						<h3 id="tit3">주암댐(%)</h3>
+  						<div>
+    					<canvas id="barChart"></canvas>
+  						</div>
+					</main>
+					<%-- 1223 김민석: 서브 차트3 추가 --%>
                 </div>
 
                 <div class="collumn4">
+                     <canvas id="myChart"></canvas> <%-- 1223 김민석: 서브 차트4 추가 --%>
                 </div>
         
             </div>

@@ -114,6 +114,12 @@ body{
 
 
 .part1 {
+/* 1223 김민석: css 추가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;	
+ /* 1223 김민석: css 추가 */
+	
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -125,7 +131,7 @@ body{
   float: left;
   transition: ease-in-out 0.5s;
   
-
+  flex-direction: column; /* 1223 김민석: css 추가 */
 }
 
 
@@ -959,3 +965,122 @@ margin-top: 5px;
 .article_in {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1223 김민석 : 차트 css 추가 */
+
+/* 서브 차트3 css */
+.container {
+    width: 100%;
+    margin: 15px auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  /* =================================================================================== */
+
+
+/* 서브 차트2 css */  
+  .chart1 {
+    margin: 0;
+    overflow: hidden;
+    font-family: Courier, monospace;
+    font-size: 14px;
+    color:#ccc; 
+  }
+  
+  .wrapper {
+    display: block;
+    margin: auto;
+    border: 1px solid #555;
+    position: relative;
+  }
+  
+  p{text-align:center;}
+  .label {
+    height: 1em;
+    padding: .3em;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    display: none;
+    color:#333;
+  }
+  /* =================================================================================== */
+
+
+
+/* 서브 차트2 css  
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.chart2 {
+  font-family: Roboto, sans-serif;
+}
+
+#chart2 {
+  max-width: 650px;
+  margin: 35px auto;
+}
+*/
+ /* =================================================================================== */
+ 
+  
+  
+/* 메인 차트 css */
+.chart3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  #chartdiv {
+    width: 100%;
+    height: 650px;
+  }
+  
+    /* =================================================================================== */
+    
+/* 메인 차트 타이틀 */
+#tit1 {
+	text-align: center;
+	top: -45px;
+    position: relative;
+    font-size: 45px;
+}
+
+/* 서브 차트3 타이틀 */
+#tit3 {
+	text-align: center;
+}
+
+/* 서브 차트2 타이틀 */
+#tit2 {
+	text-align: center;
+}
+
+/* 서브 차트4 css */
+#myChart {
+	height: 280px !important;
+}
+
+/* 1223 김민석 : 차트 css 추가 */
+
+
+
+
+
+
+
+
+
+
+
+
