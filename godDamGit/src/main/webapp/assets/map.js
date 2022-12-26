@@ -38,8 +38,10 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 	};
 
 var checkDamColor = function(num){
-	if(num>=50){
+	if(num>=70){
 		imageSrc = "https://ifh.cc/g/jkAhgZ.png";
+	}else if(num>=50){
+		imageSrc = "https://ifh.cc/g/YtKN1t.png";
 	}else if(num>=30){
 		imageSrc = "https://ifh.cc/g/sooo8Y.png";
 	}else{
@@ -48,7 +50,9 @@ var checkDamColor = function(num){
 	return imageSrc;
 };
 var checkDangerLevel=function(num){
-	if(num>=50){
+	if(num>=70){
+		damDangerLevel="안전";
+	}else if(num>=50){
 		damDangerLevel="정상";
 	}else if(num>=30){
 		damDangerLevel="경계";
