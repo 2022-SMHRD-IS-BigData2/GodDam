@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.entity.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,6 +21,7 @@
 
 </head>
 <body>
+<% BoardDTO board = (BoardDTO)request.getAttribute("num"); %>
     <div class="board_wrap">
         
         <div class="board_title bigName">
@@ -36,33 +38,26 @@
                 <div class="info">
                     <div>
                         <div class="a1a headline3">번호</div>
-                        <div class="a2a headline3">1</div>
+                        <div class="a2a headline3"><%= board.getBook_seq() %></div>
                     </div>
                     <div>
                         <div class="a1a headline3">글쓴이</div>
-                        <div class="a2a headline3">김이름</div>
+                        <div class="a2a headline3"><%= board.getBook_id() %></div>
                     </div>
                     <div>
                         <div class="a1a headline3">작성일</div>
-                        <div class="a2a headline3">2021.1.16</div>
+                        <div class="a2a headline3"><%= board.getBook_rdate() %></div>
                     </div>
                     <div>
                         <div class="a1a headline3">조회</div>
-                        <div class="a2a2 headline3">33</div>
+                        <div class="a2a2 headline3"><%= board.getBook_cnt() %></div>
                     </div>
                 </div>
                 
                 <div class="page headline3">
-                    <img src="https://i.pinimg.com/originals/57/c5/bc/57c5bc15e6e7c7c7167e25f23371178a.jpg  " alt="이미지가 없습니다" class="left_img">
+                    <img src="<%= board.getBook_img() %>" alt="이미지가 없습니다" class="left_img">
                     <div class="spacing"></div>
-
-                    크리스마스 매치는 NBA 사무국이 1년 중 가장 심혈을 기울여 짜는 경기다. 미국에서 1년 중 가장 큰 휴일인 만큼, 우승 후보들끼리 대결이나 이야깃거리가 얽혀 있는 팀들이 격돌한다.
-
-올해 크리스마스에도 5개의 경기가 순차적으로 열린다. 필라델피아 세븐티식서스와 뉴욕 닉스가 맞붙는 걸 시작으로 LA 레이커스와 댈러스 매버릭스, 밀워키 벅스와 보스턴 셀틱스, 멤피스 그리즐리스와 골든스테이트 워리어스, 피닉스 선즈와 덴버 너게츠의 경기가 차례대로 진행된다.
-
-가장 주목 받는 건 댈러스와 경기를 펼치는 르브론 제임스. 르브론은 개인통산 크리스마스 매치 16경기 출전으로 코비 브라이언트와 최다 기록 동률을 쓰고 있다. 댈러스전에 나온다면 17경기 출전으로 NBA 역대 크리스마스 매치 최다 출전선수가 된다.
-                
-
+					<%= board.getBook_content() %>
                 </div>
             </div>
             
