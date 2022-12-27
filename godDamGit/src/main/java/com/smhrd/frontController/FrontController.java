@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.controller.BoardWriteCon;
 //
 import com.smhrd.controller.Controller;
 import com.smhrd.controller.GoBoardCon;
@@ -61,6 +62,13 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/GoEdit.do", new GoBoardEditCon());
 		handlerMapping.put("/GoWrite.do", new GoBoardWriteCon());
 		handlerMapping.put("/GoView.do", new GoBoardViewCon());
+
+		handlerMapping.put("/GoBoard.do", new GoBoardCon());
+		handlerMapping.put("/GoEdit.do", new GoBoardEditCon());
+		handlerMapping.put("/GoWrite.do", new GoBoardWriteCon());
+		handlerMapping.put("/GoView.do", new GoBoardViewCon());
+
+		handlerMapping.put("/BoardWrite.do", new BoardWriteCon());
 
 //		//===================
 	}

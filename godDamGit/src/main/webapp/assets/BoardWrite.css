@@ -234,14 +234,18 @@
 
 .filebox {
     position: relative;
-    top:-80px;
+    top:360px;
     right: -370px;
-    height: 250px;
-
+    height: 0px;
+    background-color: rgb(255, 255, 0);
+    width: 400px;
 }
 
 .filebox label {
     margin: 20px;
+    position: relative;
+    top: -440px;
+    right: -270px;
 
     border: none;
     display: inline-block;
