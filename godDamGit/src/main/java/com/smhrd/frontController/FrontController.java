@@ -61,6 +61,7 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/GoEdit.do", new GoBoardEditCon());
 		handlerMapping.put("/GoWrite.do", new GoBoardWriteCon());
 		handlerMapping.put("/GoView.do", new GoBoardViewCon());
+
 //		//===================
 	}
 //	

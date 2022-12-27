@@ -30,6 +30,8 @@
     <mapper resource="com/smhrd/dao/DayMapper.xml"/>
     <mapper resource="com/smhrd/dao/MonthMapper.xml"/>
     <mapper resource="com/smhrd/dao/DamMapper.xml"/>
+    <mapper resource="com/smhrd/dao/BoardMapper.xml"/>
+    
     
   </mappers>
 </configuration>
