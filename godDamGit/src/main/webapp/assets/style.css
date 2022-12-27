@@ -51,8 +51,10 @@ body{
     font-size: 80px;
     text-transform: uppercase;
     display: inline-block;
-    line-height: 72px;
-    margin-bottom: 20px;
+    line-height: 71px;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 34px;               /* 1227 김민석: 54~57줄 css변경 */
 
 }
 /* 맨 밑 */
@@ -1093,6 +1095,8 @@ margin-top: 5px;
 /* 서브 차트2 타이틀 */
 #tit2 {
 	text-align: center;
+	font-size: initial;
+	/* 1227 김민석 : 폰트 사이즈 변경 */
 }
 
 /* 서브 차트4 css */
