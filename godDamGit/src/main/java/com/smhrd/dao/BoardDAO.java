@@ -21,7 +21,14 @@ public class BoardDAO {
 		
 		}
 	
-		
+		public BoardDTO boardView(int rnum) {
+			
+			SqlSession session = sqlSessionFactory.openSession( true );
+			BoardDTO board = session.selectOne("BoardView", rnum);
+			
+			session.close();
+			return board;
+		}
 		
 	
 }
