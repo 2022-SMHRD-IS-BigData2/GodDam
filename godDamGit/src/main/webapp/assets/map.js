@@ -86,7 +86,6 @@ $(document).ready(function() { // ajax로 damList 만들기
 		dataType: "json",
 		success: function(res) {//call back함수, 응답값이 res로 자동으로 담김
 			console.log('요청성공');
-			console.log(res);
 			var damList = res;
 			for (var i = 0; i < res.length; i++) {
 				nameList.push(res[i]);
@@ -109,7 +108,6 @@ $(document).ready(function() { // ajax로 lastList 만들기
 		dataType: "json",
 		success: function(res) {//call back함수, 응답값이 res로 자동으로 담김
 			console.log('요청성공');
-			console.log(res);
 			var positions = [];
 			for (var i = 0; i < res.length; i++) {
 				var lastList = res;
@@ -206,14 +204,238 @@ $('#submit').on("click", function() {
 });
 var checkcolor=function(num){
 	var areaColor
-	if(num>=50){
+	if(num>=70){
 		areaColor="#2b66f6";
-	}else if(num>=30){
+	}else if(num>=50){
 		areaColor="#FFF803";
-	}else{
+	}else if(num>=30){
 		areaColor="#FF2503";
+	}else{
+		areaColor="#FF2503"
 	}
 	
 	return areaColor;
 };
+var polygons = [];
+var areaname=[];
+const customOverlay = new kakao.maps.CustomOverlay({});
+$(document).ready(function() { // ajax로 damList 만들기
 
+	
+	$.ajax({
+		url: "LastDam.do",
+		type: "post",
+		dataType: "json",
+		success: function(res) {//call back함수, 응답값이 res로 자동으로 담김
+			console.log('요청성공');
+			var selectDay = res;
+			
+			for(var i=0;i<koreaarea[0].features.length;i++){
+				areaname.push(koreaarea[0].features[i].properties.CTP_KOR_NM);
+			}
+			console.log(areaname)
+/*===================================폴리곤넣기================================================ */
+/*===================================서울================================================ */
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[0].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[0].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[0].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[0].properties.CTP_KOR_NM, path:paths, dam_name:['soyang'],dam_num:[1],vowrate:[res[0].d_vow_rate]}});
+/*===================================부산================================================ */	
+	var paths=[];
+	for(var j=0;j<1;j++){
+    	for(var i=0;i<koreaarea[0].features[1].geometry.coordinates[j][0].length;i++){                                                                                                                               
+    		paths.push(
+    			new kakao.maps.LatLng(koreaarea[0].features[1].geometry.coordinates[j][0][i][1],
+    			koreaarea[0].features[1].geometry.coordinates[0][0][i][0])
+    			)
+    	}
+    }
+    polygons.push({poly:{name:koreaarea[0].features[1].properties.CTP_KOR_NM, path:paths, dam_name:['namgang','milyang'],dam_num:[8,9],vowrate:[res[7].d_vow_rate,res[8].d_vow_rate]}});
+/*===================================대구================================================ */    
+    var paths=[];
+    for(var i=0;i<koreaarea[0].features[2].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[2].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[2].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[2].properties.CTP_KOR_NM, path:paths, dam_name:['andong'],dam_num:[10],vowrate:[res[9].d_vow_rate]}});
+/*===================================인천================================================ */	
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[3].geometry.coordinates[21][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[3].geometry.coordinates[21][0][i][1],
+    		koreaarea[0].features[3].geometry.coordinates[21][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[3].properties.CTP_KOR_NM, path:paths, dam_name:['soyang'],dam_num:[1],vowrate:[res[0].d_vow_rate]}});
+/*===================================광주================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[4].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[4].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[4].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[4].properties.CTP_KOR_NM, path:paths, dam_name:['juam'],dam_num:[14],vowrate:[res[13].d_vow_rate]}});
+	
+	/*===================================대전================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[5].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[5].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[5].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[5].properties.CTP_KOR_NM, path:paths, dam_name:['daecheong'],dam_num:[4],vowrate:[res[3].d_vow_rate]}});
+	/*===================================울산================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[6].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[6].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[6].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[6].properties.CTP_KOR_NM, path:paths, dam_name:['soyang'],dam_num:[1],vowrate:[res[0].d_vow_rate]}});
+	/*===================================세종특별자치시================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[7].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[7].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[7].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[7].properties.CTP_KOR_NM, path:paths, dam_name:['daecheong'],dam_num:[4],vowrate:[res[3].d_vow_rate]}});
+	/*===================================경기도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[8].geometry.coordinates[2][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[8].geometry.coordinates[2][0][i][1],
+    		koreaarea[0].features[8].geometry.coordinates[2][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[8].properties.CTP_KOR_NM, path:paths, dam_name:['soyang'],dam_num:[1],vowrate:[res[0].d_vow_rate]}});
+	
+	/*===================================강원도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[9].geometry.coordinates[4][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[9].geometry.coordinates[4][0][i][1],
+    		koreaarea[0].features[9].geometry.coordinates[4][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[9].properties.CTP_KOR_NM, path:paths, dam_name:['hoengseong'],dam_num:[3],vowrate:[res[2].d_vow_rate]}});	
+	/*===================================충청북도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[10].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[10].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[10].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[10].properties.CTP_KOR_NM, path:paths, dam_name:['chungju'],dam_num:[2],vowrate:[res[1].d_vow_rate]}});
+	/*===================================충청남도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[11].geometry.coordinates[4][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[11].geometry.coordinates[4][0][i][1],
+    		koreaarea[0].features[11].geometry.coordinates[4][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[11].properties.CTP_KOR_NM, path:paths, dam_name:['daecheong','boryeong'],dam_num:[4,5],vowrate:[res[3].d_vow_rate,res[4].d_vow_rate]}});
+	/*===================================전라북도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[12].geometry.coordinates[11][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[12].geometry.coordinates[11][0][i][1],
+    		koreaarea[0].features[12].geometry.coordinates[11][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[12].properties.CTP_KOR_NM, path:paths, dam_name:['yongdam'],dam_num:[7],vowrate:[res[6].d_vow_rate]}});
+		/*===================================전라남도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[13].geometry.coordinates[32][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[13].geometry.coordinates[32][0][i][1],
+    		koreaarea[0].features[13].geometry.coordinates[32][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[13].properties.CTP_KOR_NM, path:paths, dam_name:['seomjingang'],dam_num:[13],vowrate:[res[12].d_vow_rate]}});
+	/*===================================광주================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[4].geometry.coordinates[0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[4].geometry.coordinates[0][i][1],
+    		koreaarea[0].features[4].geometry.coordinates[0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[4].properties.CTP_KOR_NM, path:paths, dam_name:['juam'],dam_num:[14],vowrate:[res[13].d_vow_rate]}});
+		/*===================================경상북도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[14].geometry.coordinates[0][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[14].geometry.coordinates[0][0][i][1],
+    		koreaarea[0].features[14].geometry.coordinates[0][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[14].properties.CTP_KOR_NM, path:paths, dam_name:['milyang','hapcheon'],dam_num:[9,12],vowrate:[res[8].d_vow_rate,res[11].d_vow_rate]}});	
+		/*===================================경상남도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[15].geometry.coordinates[9][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[15].geometry.coordinates[9][0][i][1],
+    		koreaarea[0].features[15].geometry.coordinates[9][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[15].properties.CTP_KOR_NM, path:paths, dam_name:['namgang','hapcheon'],dam_num:[8,12],vowrate:[res[7].d_vow_rate,res[11].d_vow_rate]}});	
+		/*===================================제주도================================================ */		
+	var paths=[];
+    for(var i=0;i<koreaarea[0].features[16].geometry.coordinates[2][0].length;i++){                                                                                                                               
+    	paths.push(
+    		new kakao.maps.LatLng(koreaarea[0].features[16].geometry.coordinates[2][0][i][1],
+    		koreaarea[0].features[16].geometry.coordinates[2][0][i][0])
+    )}
+	polygons.push({poly:{name:koreaarea[0].features[16].properties.CTP_KOR_NM, path:paths, dam_name:['soyang'],dam_num:[1],vowrate:[res[0].d_vow_rate]}});	
+	
+	
+		/*===================================광주가 2번들어갔음!!================================================ */
+	
+	for (var i = 0, len = polygons.length; i < len; i++) {
+    displayArea(polygons[i].poly);
+	}
+	function displayArea(poly) {
+    // 다각형을 생성합니다 
+    var polygon = new kakao.maps.Polygon({
+        map: map, // 다각형을 표시할 지도 객체
+        path: poly.path,
+        strokeWeight: 2,
+        strokeColor: '#004c80',
+        strokeOpacity: 0.8,
+        fillColor: '#fff',
+        fillOpacity: 0.7 
+    });
+
+    // 다각형에 mouseover 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 변경합니다 
+    // 지역명을 표시하는 커스텀오버레이를 지도위에 표시합니다
+    kakao.maps.event.addListener(polygon, 'mouseover', function(mouseEvent) {
+        polygon.setOptions({fillColor: '#09f'});
+
+        customOverlay.setContent('<div class="area">' + poly.name + '</div>');
+        
+        customOverlay.setPosition(mouseEvent.latLng); 
+        customOverlay.setMap(map);
+    });
+
+    // 다각형에 mousemove 이벤트를 등록하고 이벤트가 발생하면 커스텀 오버레이의 위치를 변경합니다 
+    kakao.maps.event.addListener(polygon, 'mousemove', function(mouseEvent) {
+        
+        customOverlay.setPosition(mouseEvent.latLng); 
+    });
+
+    // 다각형에 mouseout 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 원래색으로 변경합니다
+    // 커스텀 오버레이를 지도에서 제거합니다 
+    kakao.maps.event.addListener(polygon, 'mouseout', function() {
+        polygon.setOptions({fillColor: '#fff'});
+        customOverlay.setMap(null);
+    }); 
+
+    // 다각형에 click 이벤트를 등록하고 이벤트가 발생하면 다각형의 이름과 면적을 인포윈도우에 표시합니다 
+
+}
+
+
+		},
+		// 3. 요청이 실패할때 실행할 함수 : 오류임!
+		erro: function() {
+			console.log('요청실패!');
+		}
+	})
+});
