@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/map.css"><!-- 1227 우종빈 -->
 
     <title>Newspaper Style Design Experiment</title>
     <meta name="viewport" content="width=device-width">
