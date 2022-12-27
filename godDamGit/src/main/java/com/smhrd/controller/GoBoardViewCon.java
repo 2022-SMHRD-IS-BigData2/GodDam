@@ -14,22 +14,19 @@ public class GoBoardViewCon implements Controller {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
-		int book_seq = Integer.parseInt(request.getParameter("book_seq"));
+		int rnum = 1;
+		String snum = request.getParameter("rnum");
 		
-		/*
-		 * BoardDAO dao = new BoardDAO(); BoardDTO board = dao.list(page);
-		 */
+		if (snum != null) {
+			rnum = Integer.parseInt(snum);
+		}
 		
-		// 객체 바인딩
-		/*
-		 * request.setAttribute("board", board);
-		 */		
-		
-		
-		
-		
+		BoardDAO dao = new BoardDAO(); 
+		BoardDTO num = dao.boardView(rnum);
+
+		request.setAttribute("num", num);
+		 	
 		return "BoardView";
 		
 		

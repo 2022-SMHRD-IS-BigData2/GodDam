@@ -15,13 +15,12 @@
 </select>
 
 
+<select id="BoardView" resultType="com.smhrd.entity.BoardDTO">
 
-
-
-
-
-
-
+	SELECT * FROM GUESTBOOK
+	WHERE RNUM = #{RNUM}
+	
+</select>
 
 
 
