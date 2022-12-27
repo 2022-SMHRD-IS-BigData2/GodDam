@@ -98,8 +98,8 @@
                 <!-- 오른쪽 메뉴 -->
                 <nav class="sub_menu" >
                 <a href="#" class="arp"><span>수칙</span> </a>
-                <a href="#" class="arp"><span>상세지도</span> </a>
-			    <a href="#" class="arp">상세정보 </a>
+                <a href="#map" class="arp"><span>상세지도</span> </a>
+			    <a href="#3page" class="arp">상세정보 </a>
 			    <a href="GoBoard.do" class="arp">방명록 </a>
                 </nav>
             </div> <!-- .subhead -->
@@ -124,7 +124,7 @@
                 <div class="collumn2 scrllap_ap">
                 <%-- 1223 김민석: 서브 차트2 추가 --%>
                     <div class="chart1">
-                      <div id="tit2">월별 주암댐 데이터(%)</div> <%-- 1227 김민석 : 이름 변경 --%>
+                      <div id="tit2">월별 주암댐 저수율 데이터(%)</div> <%-- 1227 김민석 : 이름 변경 --%>
    						<div class="wrapper">
      				   		<canvas id='ctx' class="canvas"></canvas>
       				 </div>
@@ -135,7 +135,7 @@
                 <div class="collumn3">
                     <%-- 1223 김민석: 서브 차트3 추가 --%>
                     <main class="containers">
-  						<h3 id="tit3">연별 주암댐 데이터(%)</h3> <%-- 1227 김민석 : 이름 변경 --%>
+  						<h3 id="tit3">연별 주암댐 저수율 데이터(%)</h3> <%-- 1227 김민석 : 이름 변경 --%>
   						<div>
     					<canvas id="barChart"></canvas>
   						</div>
@@ -176,7 +176,7 @@
     </section>
 
     <section class="section3">
-        <div name="main_part"></div>
+        <div id="3page" name="main_part"></div>
         <div class="part1 scrllap_ap">
         
         </div>
