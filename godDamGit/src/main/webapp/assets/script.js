@@ -59,8 +59,8 @@ var rad = Math.PI / 180;
 var frames = 0;
 
 ctx.lineWidth = 1;
-ctx.strokeStyle = "#999";
-ctx.fillStyle = "#ccc";
+ctx.strokeStyle = "#000000";
+ctx.fillStyle = "#2f4f4f";
 ctx.font = "14px monospace";
 
 var grd = ctx.createLinearGradient(0, 0, 0, cy);

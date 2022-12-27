@@ -1096,7 +1096,8 @@ margin-top: 5px;
 #tit2 {
 	text-align: center;
 	font-size: initial;
-	/* 1227 김민석 : 폰트 사이즈 변경 */
+	color: black;
+	/* 1227 김민석 : 폰트 사이즈 및 색상 변경 */
 }
 
 /* 서브 차트4 css */
