@@ -32,7 +32,7 @@
             
             <div class="board_view">
 
-                <form id="frm" action="" method="post" enctype="multipart/form-data">
+                <form id="frm" action="BoardWrite.do" method="post" enctype="multipart/form-data">
                 <div class="title headline2" id="title" contenteditable="true" value="title" checked="checked" >
                     이곳에 제목을 입력하세요
                 </div>
@@ -44,15 +44,15 @@
                     </div>
                     <div>
                         <div class="a1a headline3">글쓴이</div>
-                        <div class="a2a headline3" contenteditable="true" id="name"  >여기에 이름입력</div>
+                        <div class="a2a headline3" type="text" contenteditable="true" id="name">여기에 이름입력</div>
                     </div>
                     <div>
                         <div class="a1a headline3">비밀번호</div>
-                        <div class="a2a2 headline3" contenteditable="true" id="pw">여기에 비밀번호입력</div>
+                        <div class="a2a2 headline3" type="text" contenteditable="true" id="pw">여기에 비밀번호입력</div>
                     </div>
                 </div>
                 
-                <div class="page headline3" contenteditable="true" id="content">
+                <div class="page headline3" type="text" contenteditable="true" id="content">
                     <br> <br>여기에 글을 써주세요
                     
                 </div>
@@ -68,8 +68,8 @@
             
             
             <div class="bt_wrap">
-                <a href="board.html" class="on headline1 arp3">목록</a>
-                <a href="board.html" onclick="return chk_form()" class="on2 headline1 arp3">작성</a>
+                <a href="GoBoard.do" class="on headline1 arp3">목록</a>
+                <a onclick="return chk_form()" class="on2 headline1 arp3">작성</a>
             </div>
             
         </div>

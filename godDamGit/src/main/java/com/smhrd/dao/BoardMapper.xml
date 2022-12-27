@@ -15,12 +15,12 @@
 </select>
 
 
-<select id="BoardView" resultType="com.smhrd.entity.BoardDTO">
+<insert id="BoardWrite" parameterType="com.smhrd.entity.BoardDTO">
+	insert into msg_board (BOOK_ID, BOOK_PW, BOOK_TITLE, BOOK_CONTENT, BOOK_IMG)
+		(#{name},#{pw},#{title},#{content},#{file, jdbcType=VARCHAR})
+</insert>
 
-	SELECT * FROM GUESTBOOK
-	WHERE RNUM = #{RNUM}
-	
-</select>
+
 
 
 
