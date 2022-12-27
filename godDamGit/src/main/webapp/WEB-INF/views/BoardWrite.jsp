@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic|Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="/js/board_write.js"></script>
+    <script type="text/javascript" src="assets/Board_Write.js"></script>
 
 
 </head>
@@ -32,7 +32,7 @@
             
             <div class="board_view">
 
-                <form id="frm" action="" method="post">
+                <form id="frm" action="" method="post" enctype="multipart/form-data">
                 <div class="title headline2" id="title" contenteditable="true" value="title" checked="checked" >
                     이곳에 제목을 입력하세요
                 </div>
@@ -54,10 +54,12 @@
                 
                 <div class="page headline3" contenteditable="true" id="content">
                     <br> <br>여기에 글을 써주세요
-                    <input type="url" placeholder="여기에 업로드할 이미지 주소를 입력하세요">
-
+                    
                 </div>
-
+                <div class="filebox">
+                    <label for="file">이미지를 넣어주세요</label> 
+                    <input type="file" id="file">
+                </div>
 
 
                 </form>
@@ -66,8 +68,8 @@
             
             
             <div class="bt_wrap">
-                <a href="GoBoard.do" class="on headline1 arp3">목록</a>
-                <a href="GoBoard.do" onclick="return chk_form()" class="on2 headline1 arp3">작성</a>
+                <a href="board.html" class="on headline1 arp3">목록</a>
+                <a href="board.html" onclick="return chk_form()" class="on2 headline1 arp3">작성</a>
             </div>
             
         </div>

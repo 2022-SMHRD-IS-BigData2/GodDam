@@ -1,3 +1,5 @@
+
+// 날씨 데이터 api용 ajax - 형철
   $(document).ready(function(){         
       $.ajax({
             url: "https://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid=b4032dcdcb4afdf78c8947acaffbf03c",

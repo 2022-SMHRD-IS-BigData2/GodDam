@@ -1,8 +1,7 @@
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.entity.BoardDTO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,8 +63,8 @@
                     <div class="num"><%=board.getRnum() %></div>
                     <div class="title"><a href="GoView.do"><%=board.getBook_title() %></a></div>
                     <div class="writer"><%=board.getBook_id() %></div>
-                    <div class="date"><%=board.getBook_regdate() %></div>
-                    <div class="count"><%=board.getBookcount() %></div>
+                    <div class="date"><%=board.getBook_rdate() %></div>
+                    <div class="count"><%=board.getBook_cnt() %></div>
                 </div>
                 <% } %>
     
