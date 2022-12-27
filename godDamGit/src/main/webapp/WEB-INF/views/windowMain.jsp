@@ -25,13 +25,14 @@ LocalDate today=LocalDate.now();%>
     color: #fff;"><%=dam_namekor%> 상세 정보</strong>
 <input readonly id="damNamewin" type="text" value=<%=dam_name%>>
 <input type="date" id="startDate" value=<%=today.minusMonths(6)%>>
+<td>~</td>
 <input type="date" id="endDate" value=<%=today%>>
 <input type="submit" id="submitwin">
 
 <div style="position: relative;
     overflow: hidden;
     width: 100%;
-    height: 250px;
+    height: 360px;
     text-align: center;
     line-height: normal;
     z-index: 0;

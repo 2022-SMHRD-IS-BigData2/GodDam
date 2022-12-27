@@ -91,13 +91,15 @@ $('#submitwin').on("click", function() {
 						// ⑥dataset값(Array)
 						data: datavow_rate(res),
 						// ⑦dataset의 배경색(rgba값을 String으로 표현)
-						backgroundColor: 'rgba(24, 27, 37, 1)',
-						// ⑧dataset의 선 색(rgba값을 String으로 표현)
-						borderColor: 'rgba(24, 27, 37, 1)',
-						// ⑨dataset의 선 두께(Number)
-						hoverBorderColor: 'rgba(13, 22, 49, 1)',
-						
-						pointBorderWidth: 0,
+						fill: false,
+    					borderColor: 'rgb(0, 0, 0)',
+    					pointBorderColor : 'rgba(255,255,255,0)',
+   					    pointBackgroundColor : 'rgba(255, 255, 255 , 0)',
+    					pointHoverBackgroundColor : 'rgba(0,0,0,1)',
+    					pointHoverBorderColor : 'rgba(0,0,0,1)',
+    					pointHoverBorderWidth : 3,
+    					tension: 0.2,
+    					pointHitRadius : 1
 
 					},
 					{
@@ -106,13 +108,15 @@ $('#submitwin').on("click", function() {
 						// ⑥dataset값(Array)
 						data: datainflow(res),
 						// ⑦dataset의 배경색(rgba값을 String으로 표현)
-						backgroundColor: 'rgba(85, 113, 252, 1)',
-						// ⑧dataset의 선 색(rgba값을 String으로 표현)
-						borderColor: 'rgba(85, 113, 252, 1)',
-						// ⑨dataset의 선 두께(Number)
-						borderWidth: 1,
-						
-						pointBorderWidth: 0,
+						fill: false,
+    					borderColor: 'rgb(85, 113, 252)',
+    					pointBorderColor : 'rgba(255,255,255,0)',
+    				    pointBackgroundColor : 'rgba(255, 255, 255 , 0)',
+    					pointHoverBackgroundColor : 'rgba(85, 113, 252, 1)',
+    					pointHoverBorderColor : 'rgba(85, 113, 252, 1)',
+    				    pointHoverBorderWidth : 3,
+    					tension: 0.2,
+    					pointHitRadius : 1
 						
 					},
 					{
@@ -121,13 +125,15 @@ $('#submitwin').on("click", function() {
 						// ⑥dataset값(Array)
 						data: dataoutflow(res),
 						// ⑦dataset의 배경색(rgba값을 String으로 표현)
-						backgroundColor: 'rgba(106, 236, 121, 1)',
-						// ⑧dataset의 선 색(rgba값을 String으로 표현)
-						borderColor: 'rgba(106, 236, 121, 1)',
-						// ⑨dataset의 선 두께(Number)
-						borderWidth: 1,
-						
-						pointBorderWidth: 0,
+						fill: false,
+    					borderColor: 'rgb(106, 236, 121)',
+    					pointBorderColor : 'rgba(255,255,255,0)',
+    				    pointBackgroundColor : 'rgba(255, 255, 255 , 0)',
+    					pointHoverBackgroundColor : 'rgba(106, 236, 121, 1)',
+    					pointHoverBorderColor : 'rgba(106, 236, 121, 1)',
+    				    pointHoverBorderWidth : 3,
+    					tension: 0.2,
+    					pointHitRadius : 1
 
 					}
 					]
