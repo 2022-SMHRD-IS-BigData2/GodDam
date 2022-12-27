@@ -14,11 +14,11 @@ public class BoardDTO {
 	private String book_pw;
 	private String book_title;
 	private String book_content;
-	private String book_regdate;
+	private String book_rdate;
 	private String admin_id;
 	private String book_type;
 	private String book_img;
-	private String bookcount;
+	private int book_cnt;
 	
 
 }
