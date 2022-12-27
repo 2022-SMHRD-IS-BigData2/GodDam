@@ -63,7 +63,6 @@ public class BoardWriteCon implements Controller {
 		// 3. DAO의 boardwrite사용
 		BoardDAO dao = new BoardDAO();
 		int cnt = dao.write(dto);
-		System.out.println(cnt); // 테스트
 		
 		// 4. 성공 실패 구분
 		if (cnt > 0) {
