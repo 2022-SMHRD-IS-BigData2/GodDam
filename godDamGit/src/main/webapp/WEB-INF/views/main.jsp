@@ -56,24 +56,23 @@
   <%-- 1227 안형철 : 달력용 jquery 추가 끝 --%>
 
 </head>
-<body >
+<body>
     <!-- 세션1 시작 -->
-    <div id="scrollap"> <%--1226 김민석: class -> id로 변경 --%>
+    <div class="scrollap"> <%-- 1226 김민석: class -> id로 변경  // 1227 김민석: id -> class 다시 수정--%>
     
-
         <div class="head scrllap_ap">
 
             <div class="headerobjectswrapper">
                 <!-- 날씨정보 -->
                 <div class="weather">
-                
+               
                    <div class = "weathericon"> </div>
                    <div class = "weathertext">
                        <div class = "weatherarea"> </div>
                        <div class = "weatherdes"> </div>
                          <div class = "weatherhot"> </div>
                        <div class = "weatherwind"> </div>
-                       <div class = "weathercloud"> </div>
+                       <div id = "weathercloud"> </div> <%-- 1227 김민석: class -> id로 변경 --%>
                   </div>     
                 </div>
 
@@ -126,10 +125,9 @@
                 <div class="collumn2 scrllap_ap">
                 <%-- 1223 김민석: 서브 차트2 추가 --%>
                     <div class="chart1">
-                      <div id="tit2">주암댐(%)</div>
+                      <div id="tit2">월별 주암댐 데이터(%)</div> <%-- 1227 김민석 : 이름 변경 --%>
    						<div class="wrapper">
      				   		<canvas id='ctx' class="canvas"></canvas>
-      					<div class="label">text</div>
       				 </div>
     				</div>
     				<%-- 1223 김민석: 서브 차트2 추가 --%>
@@ -138,7 +136,7 @@
                 <div class="collumn3">
                     <%-- 1223 김민석: 서브 차트3 추가 --%>
                     <main class="containers">
-  						<h3 id="tit3">주암댐(%)</h3>
+  						<h3 id="tit3">연별 주암댐 데이터(%)</h3> <%-- 1227 김민석 : 이름 변경 --%>
   						<div>
     					<canvas id="barChart"></canvas>
   						</div>
@@ -152,7 +150,7 @@
         
             </div>
         </div>
-
+ 
 
     </section> <!-- 세션1 끝 -->
     <section class="section2">
@@ -277,7 +275,7 @@
 
 <%--1226 김민석: 스크롤 상단 버튼 추가 --%>
 	<div style="position:fixed; bottom:55px; right:20px; z-index:99;"> 
-	<a href="#scrollap" id="boxicon">
+	<a href="#weathercloud"> <%-- 1227 김민석 : id 제거 --%>
  	 <i class="fa-regular fa-circle-up" style="font-size: xxx-large; color:black;"></i>
 	</a>	
 	</div>

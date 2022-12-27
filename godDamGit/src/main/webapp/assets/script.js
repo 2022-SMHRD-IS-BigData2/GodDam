@@ -51,7 +51,7 @@ var barChart = new Chart(ctx, {
 var label = document.querySelector(".label");
 var c = document.getElementById("ctx");
 var ctx = c.getContext("2d");
-var cw = c.width = 550;
+var cw = c.width = 450;
 var ch = c.height = 350;
 var cx = cw / 2,
   cy = ch / 2;
@@ -59,8 +59,8 @@ var rad = Math.PI / 180;
 var frames = 0;
 
 ctx.lineWidth = 1;
-ctx.strokeStyle = "#999";
-ctx.fillStyle = "#ccc";
+ctx.strokeStyle = "#000000";
+ctx.fillStyle = "#2f4f4f";
 ctx.font = "14px monospace";
 
 var grd = ctx.createLinearGradient(0, 0, 0, cy);
@@ -68,15 +68,20 @@ grd.addColorStop(0, "hsla(167,72%,60%,1)");
 grd.addColorStop(1, "hsla(167,72%,60%,0)");
 
 var oData = {
-  "2015": 70.1,
-  "2016": 72.7,
-  "2017": 64.5,
-  "2018": 56.0,
-  "2019": 40.3,
-  "2020": 38.4,
-  "2021": 35.7,
-  "2022": 26.0
+  "1월": 42.88,
+  "2월": 37.60,
+  "3월": 33.79,
+  "4월": 33.27,
+  "5월": 30.53,
+  "6월": 26.60,
+  "7월": 25.05,
+  "8월": 36.94,
+  "9월": 39.91,
+  "10월": 33.91,
+  "11월": 31.70,
+  "12월": 30.48
 };
+// 1227 김민석: 71~82줄 서브차트 데이터 변경 
 
 var valuesRy = [];
 var propsRy = [];
@@ -128,7 +133,7 @@ ctx.lineTo(C.x, C.y);
 ctx.stroke();
 
 // vertical ( A - B )
-var aStep = (chartHeight - 50) / (vData);
+var aStep = (chartHeight - 110) / (vData);   // 1227 김민석: 데이터 변경
 
 var Max = Math.ceil(arrayMax(valuesRy) / 10) * 10;
 var Min = Math.floor(arrayMin(valuesRy) / 10) * 10;
@@ -144,7 +149,7 @@ for (var i = 0; i <= vData; i++) {
   if (i == 0) {
     a[i] = {
       x: A.x,
-      y: A.y + 25,
+      y: A.y,
       val: Max
     }
   } else {
@@ -239,7 +244,7 @@ requestId = window.requestAnimationFrame(animateChart);
 
 /////// EVENTS //////////////////////
 c.addEventListener("mousemove", function(e) {
-  label.innerHTML = "";
+  label.innerHTML = "2022년 주암댐";
   label.style.display = "none";
   this.style.cursor = "default";
 
@@ -376,74 +381,74 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 
 chart.data = [{
-  "day": "1월",
+  "months": "1월",
   "2021년": 87.65,
   "2022년": 65.67,
   
 }, {
-  "day": "2월",
+  "months": "2월",
   "2021년": 67.50,
   "2022년": 50.84,
   
 }, {
-  "day": "3월",
+  "months": "3월",
   "2021년": 72.72,
   "2022년": 61.64,
   
 }, {
-  "day": "4월",
+  "months": "4월",
   "2021년": 70.94,
   "2022년": 52.48,
   
 }, {
-  "day": "5월",
+  "months": "5월",
   "2021년": 80.81,
   "2022년": 47.67,
   
 }, {
-  "day": "6월",
+  "months": "6월",
   "2021년": 64.28,
   "2022년": 36.58,
   
 }, {
-  "day": "7월",
+  "months": "7월",
   "2021년": 74.58,
   "2022년": 28.49,
   
 }, {
-  "day": "8월",
+  "months": "8월",
   "2021년": 63.56,
   "2022년": 25.87,
   
 }, {
-  "day": "9월",
+  "months": "9월",
   "2021년": 67.69,
   "2022년": 23.71,
   
 }, {
-  "day": "10월",
+  "months": "10월",
   "2021년": 58.21,
   "2022년": 28.54,
   
 }, {
-  "day": "11월",
+  "months": "11월",
   "2021년": 64.54,
   "2022년": 26.80,
   
 }, {
-  "day": "12월",
+  "months": "12월",
   "2021년": 60.42,
   "2022년": 30.21,
   
 }];
 
-chart.dateFormatter.inputDateFormat = "dd";
+chart.dateFormatter.inputDateFormat = "MM";
 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
 dateAxis.startLocation = 0.5;
 dateAxis.endLocation = 0.5;
 dateAxis.baseInterval = {
-  timeUnit: "day",
+  timeUnit: "months",
   count: 1
 }
 
@@ -451,33 +456,35 @@ var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.tooltip.disabled = true;
 
 var series = chart.series.push(new am4charts.LineSeries());
-series.name = "2021년 저수율(%)";
-series.dataFields.dateX = "day";
-series.dataFields.valueY = "2021년";
+series.name = "2022년 저수율(%)";
+series.dataFields.dateX = "months";
+series.dataFields.valueY = "2022년";
 // series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
-series.tooltipText = "[#000]댐：{valueY.value}[/]";
-series.tooltip.background.fill = am4core.color("#FFF");
+series.tooltipText = "[#000]2022년：{valueY.value}%[/]";
+series.tooltip.background.fill = am4core.color("#dc143c");
 series.tooltip.getStrokeFromObject = true;
 series.tooltip.background.strokeWidth = 3;
 series.tooltip.getFillFromObject = false;
 series.fillOpacity = 0.6;
-series.strokeWidth = 2;
+series.strokeWidth = 5;
 series.stacked = true;
 
 var series2 = chart.series.push(new am4charts.LineSeries());
-series2.name = "2022년 저수율(%)";
-series2.dataFields.dateX = "day";
-series2.dataFields.valueY = "2022년";
+series2.name = "2021년 저수율(%)";
+series2.dataFields.dateX = "months";
+series2.dataFields.valueY = "2021년";  // 1227 김민석: 463줄, 477줄 데이터 변경
 // series2.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/motorcycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
-series2.tooltipText = "[#000]댐：{valueY.value}[/]";
-series2.tooltip.background.fill = am4core.color("#FFF");
+series2.tooltipText = "[#000]2021년：{valueY.value}%[/]";
+series2.tooltip.background.fill = am4core.color("#7cfc00");
 series2.tooltip.getFillFromObject = false;
 series2.tooltip.getStrokeFromObject = true;
 series2.tooltip.background.strokeWidth = 3;
 series2.sequencedInterpolation = true;
 series2.fillOpacity = 0.6;
 series2.stacked = true;
-series2.strokeWidth = 2;
+series2.strokeWidth = 5;
+
+// 1227 김민석: day를 monts로 다 변경, 여러 데이터 변경 등등..
 
 chart.cursor = new am4charts.XYCursor();
 chart.cursor.xAxis = dateAxis;
@@ -564,7 +571,7 @@ $.ajax({
                       options: {
                          title: {
                              display: true,
-                             text: '주암댐'
+                             text: '실시간 주암댐 데이터' // 1227 김민석 : 데이터 변경
                              }
                          }
                     });

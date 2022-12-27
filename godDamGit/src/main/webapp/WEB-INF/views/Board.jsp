@@ -61,7 +61,7 @@
             		<% for( BoardDTO board : asd ) {%>
                 <div class="line">
                     <div class="num"><%=board.getRnum() %></div>
-                    <div class="title"><a href="GoView.do"><%=board.getBook_title() %></a></div>
+                    <div class="title"><a href="GoView.do?rnum=<%=board.getRnum()%>"><%=board.getBook_title() %></a></div>
                     <div class="writer"><%=board.getBook_id() %></div>
                     <div class="date"><%=board.getBook_rdate() %></div>
                     <div class="count"><%=board.getBook_cnt() %></div>
