@@ -16,8 +16,8 @@
 
 
 <insert id="BoardWrite" parameterType="com.smhrd.entity.BoardDTO">
-	insert into msg_board (BOOK_ID, BOOK_PW, BOOK_TITLE, BOOK_CONTENT, BOOK_IMG)
-		(#{name},#{pw},#{title},#{content},#{file, jdbcType=VARCHAR})
+	insert into GUESTBOOK (TB_GUESTBOOK_SEQ, BOOK_ID, BOOK_PW, BOOK_TITLE, BOOK_CONTENT, BOOK_IMG)
+	VALUE (#{book_id},#{book_pw},#{book_title},#{book_content},#{book_img, jdbcType=VARCHAR})
 </insert>
 
 <select id="BoardView" resultType="com.smhrd.entity.BoardDTO">
