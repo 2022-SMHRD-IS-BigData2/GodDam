@@ -20,7 +20,12 @@
 		(#{name},#{pw},#{title},#{content},#{file, jdbcType=VARCHAR})
 </insert>
 
+<select id="BoardView" resultType="com.smhrd.entity.BoardDTO">
 
+	SELECT * FROM GUESTBOOK
+	WHERE RNUM = #{RNUM}
+	
+</select>
 
 
 
