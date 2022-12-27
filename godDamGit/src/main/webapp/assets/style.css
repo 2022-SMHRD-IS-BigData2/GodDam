@@ -164,7 +164,11 @@ body{
   position: relative;
   width: 50%;
   height: 50%;
-
+  
+  padding: inherit;
+  top: 30px;
+  left: 0px;
+    
   float:left;
 
   transition: ease-in-out 0.7s;

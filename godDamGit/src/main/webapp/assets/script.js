@@ -51,7 +51,7 @@ var barChart = new Chart(ctx, {
 var label = document.querySelector(".label");
 var c = document.getElementById("ctx");
 var ctx = c.getContext("2d");
-var cw = c.width = 450;
+var cw = c.width = 500;
 var ch = c.height = 350;
 var cx = cw / 2,
   cy = ch / 2;
