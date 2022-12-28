@@ -3,8 +3,24 @@
 <mapper namespace="com.smhrd.dao.BoardDAO">
 
 
+<!-- insert into GUESTBOOK (GUESTBOOK_SEQ, BOOK_ID, BOOK_PW, BOOK_TITLE, BOOK_CONTENT, BOOK_IMG)
+	VALUE (#{book_id},#{book_pw},#{book_title},#{book_content},#{book_img, jdbcType=VARCHAR})
+ -->
 
-
+<!-- insert into TB_GUESTBOOK
+	values(
+		BOOK_SEQ.nextval,
+		#{book_id jdbcType=VARCHAR},
+		#{book_pw jdbcType=VARCHAR},
+		#{book_title jdbcType=VARCHAR},
+		#{book_content jdbcType=VARCHAR},
+		sysdate,
+		'1',
+		'1',
+		#{book_img jdbcType=VARCHAR}
+		'1'
+		
+	) -->
 
 <select id="List" resultType="com.smhrd.entity.BoardDTO">
 
@@ -16,8 +32,20 @@
 
 
 <insert id="BoardWrite" parameterType="com.smhrd.entity.BoardDTO">
-	insert into GUESTBOOK (TB_GUESTBOOK_SEQ, BOOK_ID, BOOK_PW, BOOK_TITLE, BOOK_CONTENT, BOOK_IMG)
-	VALUE (#{book_id},#{book_pw},#{book_title},#{book_content},#{book_img, jdbcType=VARCHAR})
+	insert into TB_GUESTBOOK
+	values(
+		TB_GUESTBOOK_SEQ.nextval,
+		'1',
+		'1',
+		#{book_title},
+		'1',
+		sysdate,
+		'admin_id 1',
+		'1',
+		'1',
+		'1'
+		
+	)
 </insert>
 
 <select id="BoardView" resultType="com.smhrd.entity.BoardDTO">

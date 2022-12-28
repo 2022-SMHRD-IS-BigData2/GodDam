@@ -5,10 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@Data@AllArgsConstructor
+@Data
+@AllArgsConstructor
 public class BoardDTO {
 	
-	private int rnum;
 	private int book_seq;
 	private String book_id;
 	private String book_pw;
@@ -19,6 +19,7 @@ public class BoardDTO {
 	private String book_type;
 	private String book_img;
 	private int book_cnt;
+	private int rnum;
 	
 
 }

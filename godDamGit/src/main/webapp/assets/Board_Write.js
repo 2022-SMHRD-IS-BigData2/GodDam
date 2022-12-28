@@ -7,9 +7,8 @@
   })
 
  */
-
- function chk_form() {
-    if(document.getElementById("title").value==''){
+ /*
+  if(document.getElementById("title").value==''){
         alert("성명을 입력해주십시오.");
         return false;
     }
@@ -25,7 +24,9 @@
         alert("비밀번호를 입력해주십시오.");
         return false;
     }
+    */
     
-    
-    document.getElementById('frm').submit();
+
+ function chk_form() {
+       document.getElementById('frm').submit();
   }

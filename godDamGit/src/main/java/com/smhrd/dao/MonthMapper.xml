@@ -2,7 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.dao.MonthDetailDAO">
 
-
+<select id="detailmonth" resultType="com.smhrd.entity.MonthDetailDTO" parameterType="com.smhrd.entity.MonthDetailDTO">
+select * from tb_m_${dam_name}
+WHERE m_date = TO_DATE('${startDate}','YYYY-MM-DD HH:MI:SS')
+</select>
+<!-- 1228 우종빈 detailmonth 추가 -->
 
 </mapper>
 

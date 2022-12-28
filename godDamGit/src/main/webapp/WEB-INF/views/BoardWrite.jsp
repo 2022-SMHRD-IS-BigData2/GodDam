@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.entity.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,6 +25,8 @@
 <body>
     <div class="board_wrap">
         
+        
+        
         <div class="board_title bigName">
             Guest board
         </div>
@@ -33,8 +36,8 @@
             <div class="board_view">
 
                 <form id="frm" action="BoardWrite.do" method="post" enctype="multipart/form-data">
-                <div class="title headline2" id="title" contenteditable="true" value="title" checked="checked" >
-                    이곳에 제목을 입력하세요
+                <div class="title headline2">
+                    <input type="text" id="title" name="title" class="col4" placeholder="여기에 제목을입력 해주세요">
                 </div>
 
                 <div class="info">
@@ -44,25 +47,27 @@
                     </div>
                     <div>
                         <div class="a1a headline3">글쓴이</div>
-                        <div class="a2a headline3" type="text" contenteditable="true" id="name">여기에 이름입력</div>
+                        <div class="container"> 
+                        <input type="text" id="name" name="name" class="col" placeholder="여기에 아이디입력 해주세요"></div>
                     </div>
                     <div>
                         <div class="a1a headline3">비밀번호</div>
-                        <div class="a2a2 headline3" type="text" contenteditable="true" id="pw">여기에 비밀번호입력</div>
+                        <div class="a2a2 headline3" >
+                        <input type="text" id="pw" name="pw" class="col2" placeholder="여기에 비밀번호입력 해주세요">
+                        </div>
                     </div>
                 </div>
                 
-                <div class="page headline3" type="text" contenteditable="true" id="content">
-                    <br> <br>여기에 글을 써주세요
+                <div class="page headline3" contenteditable="true">
+                <textarea type="text" id="content" name="content" class="col3" placeholder="여기에 글을 써주세요">
+                </textarea>
                     
                 </div>
                 <div class="filebox">
                     <label for="file">이미지를 넣어주세요</label> 
-                    <input type="file" id="file">
+                    <input type="file" id="file" name="file">
                 </div>
 
-
-                </form>
 
             </div>
             
