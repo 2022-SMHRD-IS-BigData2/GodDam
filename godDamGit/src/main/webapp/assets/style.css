@@ -1172,7 +1172,7 @@ z-index: 2;
 position: absolute;
 border-radius: 100%;
 bottom: 10px;
-background-color: #8fcff1;
+background-color: #68dff9;
 z-index: 1;
 }
 
@@ -1182,3 +1182,21 @@ z-index: 1;
 }
 
 /* 1228 김민석 : 1페이지 물 사용량 수칙 css 추가 */
+
+
+/* 1228 김민석 : 방문자 css 추가 */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+.Wimg1 {
+	height: 18px;
+}
+.Wimg2 {
+	height: 30px;
+}
+.Wimg3 {
+	height: 30px;
+	width: 15px;
+}
+.Wimg4 {
+	height: 30px;
+}
+/* 1228 김민석 : 방문자 css 추가 */

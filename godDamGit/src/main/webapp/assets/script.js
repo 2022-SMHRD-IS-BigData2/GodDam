@@ -244,7 +244,7 @@ requestId = window.requestAnimationFrame(animateChart);
 
 /////// EVENTS //////////////////////
 c.addEventListener("mousemove", function(e) {
-  label.innerHTML = "2022년 주암댐";
+  label.innerHTML = "";
   label.style.display = "none";
   this.style.cursor = "default";
 
