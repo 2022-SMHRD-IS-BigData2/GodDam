@@ -70,6 +70,7 @@
 
 </head>
 <body>
+
 	<div class=""></div>
 	<div class=""></div>
 	<div class=""></div>
@@ -102,21 +103,21 @@
              border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
              padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>1인당 물 사용량 <img class="Wimg4" src="./assets/img/water4.png"></div>
-				<div class="">210(-<img class="Wimg1" src="./assets/img/water1.png">3)</div>
+				<div class="">302.2(-<img class="Wimg1" src="./assets/img/water1.png">3)</div>
 				
 			</div>
 			<div style="display: inline-block; margin: 0 5px;  float: right;
 			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
 			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>전체 방문자 <img class="Wimg2" src="./assets/img/water2.png"></div>
-				<div class="">210</div>
+				<div class=""><%=session.getAttribute("ttlday") %></div>
 				
 			</div>
 			<div style="display: inline-block; margin: 0 5px;  float: right;
 			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
 			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>오늘 방문자 <img class="Wimg3" src="./assets/img/water3.png"></div>
-				<div class="">210 </div>
+				<div class=""><%=session.getAttribute("today") %> </div>
 			</div>
 			<%-- 1228 김민석: 방문자 추가 --%>
                 
