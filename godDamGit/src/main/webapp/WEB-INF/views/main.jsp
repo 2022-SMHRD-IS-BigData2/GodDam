@@ -40,7 +40,7 @@
 	<%-- 1228 김민석: 방문자 폰트 추가 --%>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 	<%-- 1228 김민석: 방문자 폰트 추가 --%>
 	
 	<%-- 1226 우종빈: map css추가 --%>
@@ -100,21 +100,21 @@
          <%-- 1228 김민석: 방문자 추가 --%>
              <div style="display: inline-block; margin: 0 5px;  float: right;
              border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
-             padding: 10px; font-family: 'Luckiest Guy', cursive;">
+             padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>1인당 물 사용량 <img class="Wimg4" src="./assets/img/water4.png"></div>
 				<div class="">210(-<img class="Wimg1" src="./assets/img/water1.png">3)</div>
 				
 			</div>
 			<div style="display: inline-block; margin: 0 5px;  float: right;
 			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
-			 padding: 10px; font-family: 'Luckiest Guy', cursive;">
+			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>전체 방문자 <img class="Wimg2" src="./assets/img/water2.png"></div>
 				<div class="">210</div>
 				
 			</div>
 			<div style="display: inline-block; margin: 0 5px;  float: right;
 			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
-			 padding: 10px; font-family: 'Luckiest Guy', cursive;">
+			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>오늘 방문자 <img class="Wimg3" src="./assets/img/water3.png"></div>
 				<div class="">210 </div>
 			</div>
