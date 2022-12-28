@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.smhrd.dao.GuestCountDAO"%>
+<%@page import="com.smhrd.entity.GuestCountDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,6 +12,27 @@
 </head>
 <body>
 
+<%		GuestCountDTO dto=new GuestCountDTO();
+GuestCountDAO dao=new GuestCountDAO();
+
+if(session.isNew()) {
+	dao.newsession();
+}else{
+	System.out.println("아니네");
+}
+
+Date now=new Date();
+System.out.println(now);
+
+
+List<GuestCountDTO> ttlday=dao.ttlcount();
+
+System.out.println(ttlday.size());
+List<GuestCountDTO> today=dao.daycount();
+
+session.setAttribute("today", today.size());
+session.setAttribute("ttlday", ttlday.size());
+ %>
 	<h1>hello</h1>
 	
 	<!-- 
