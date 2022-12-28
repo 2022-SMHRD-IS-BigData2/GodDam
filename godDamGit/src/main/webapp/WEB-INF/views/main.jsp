@@ -120,6 +120,7 @@
         
             <div class="part2">
                 <div class="collumn1 scrllap_ap">
+                	<div class="">여기 오늘 할 일</div>
                 </div>
         
                 <div class="collumn2 scrllap_ap">
