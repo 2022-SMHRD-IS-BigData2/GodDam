@@ -164,7 +164,7 @@
 					<div class="center-inner">
 						<div class="bubbles">
 							<h1>광주 1인 1일 물 사용량:</h1>
-							<h1 class="BC">302 L/day(↑+3)</h1>
+							<h1 class="BC">302 L/day( <img class="up" src="./assets/img/up.png"> +3)</h1>
                 			<h1>목표 물 사용량:</h1>
                 			<h1 class="BC">240 L/day</h1>
                 			<h1>한국 평균 물 사용량:</h1>
