@@ -218,16 +218,16 @@
 
 }
 
-#name {
+#book_id {
     color: darkgreen;
     
 }
 
-#pw {
+#book_pw {
     color: darkgreen;
 }
 
-#content {
+#book_content {
     color: darkgreen;
 }
 
@@ -284,12 +284,12 @@
 
 /* -45deg, #33ccff 0%, #ff99cc 100% */
 
-.filebox label {
+.filebox label{
     background: linear-gradient(-45deg, #a3ffa200 0%, rgb(62, 165, 62) 100%);
     color: rgb(55, 55, 55);
 }
 
-.filebox label {
+.filebox label{
     background-size: 400% 400% !important;
     animation: gradient1 5s ease infinite !important;
 }
@@ -327,3 +327,58 @@
     }
 }
 
+.col {
+    position: relative;
+    bottom: 2px;
+    border: none;
+    height: 13px;
+    width: 60%;
+    padding-bottom: 2px;
+}
+
+.col:focus {outline: none;} 
+.col:focus {background-color: rgba(161, 237, 167, 0.618);}
+
+.col2 {
+    position: relative;
+    bottom: 2px;
+    border: none;
+    height: 13px;
+    width: 82%;
+    padding-bottom: 2px;
+}
+
+.col2:focus {outline: none;} 
+.col2:focus {background-color: rgba(161, 237, 167, 0.618);}
+
+.col3 {
+    position: relative;
+    bottom: 2px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2px;
+}
+
+.col3:focus {outline: none;} 
+
+.col4 {
+    position: relative;
+    bottom: 2px;
+    border: none;
+    height: 60%;
+    width: 90%;
+    padding-bottom: 2px;
+    background-color: rgb(129, 198, 129);
+    text-align: center;
+  
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+
+}
+
+.col4:focus {outline: none;} 
+.col4:focus {background-color: rgb(129, 198, 129)}

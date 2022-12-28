@@ -40,25 +40,25 @@ public class BoardWriteCon implements Controller {
 		
 		// 1. 데이터 가져오기
 		// 제목/ 작성자/ 내용/ 이미지
-		String title = multi.getParameter("title");
-		String writer = multi.getParameter("writer");
-		String content = multi.getParameter("content");
-		String pw = multi.getParameter("pw");
+		String book_title = multi.getParameter("title");
+		String book_id = multi.getParameter("name");
+		String book_content = multi.getParameter("content");
+		String book_pw = multi.getParameter("pw");
 		
 		// 이미지 파일의 이름 가져오기
 		// 이때, 파일 저장이 일어난다
-		String img = multi.getFilesystemName("file");
-		System.out.println(img); // 테스트
+		String book_img = multi.getFilesystemName("file");
+		System.out.println(book_img); // 테스트
 		
 		// 2. DTO로 묶기
 		BoardDTO dto = new BoardDTO();
-		dto.setBook_title(title);
-		dto.setBook_id(writer);
-		dto.setBook_pw(pw);
-		dto.setBook_content(content);
-		dto.setBook_img(img);
+		dto.setBook_id(book_id);
+		dto.setBook_pw(book_pw);
+		dto.setBook_title(book_title);
+		dto.setBook_content(book_content);
+		dto.setBook_img(book_img);
 		
-		
+		System.out.println(book_title);
 		
 		// 3. DAO의 boardwrite사용
 		BoardDAO dao = new BoardDAO();
