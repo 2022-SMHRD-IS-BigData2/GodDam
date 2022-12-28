@@ -96,9 +96,9 @@ body {
 
 .board_list > div > div {
     display: inline-block;
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: 'Rubik', sans-serif;
     color: rgb(79, 79, 79);
 
@@ -127,6 +127,8 @@ body {
 
 .board_list .date {
     width: 10%;
+	font-size: 15px;
+
 }
 
 .board_list .count {
@@ -335,7 +337,8 @@ body {
 .arp{
     text-decoration: none;
     color: var(--body-color);
-    margin-right: 23px;
+    margin-left: 25px;
+    margin-right: 25px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size:18px;
     font-weight: 600;
@@ -458,20 +461,20 @@ body {
 /* a링크 파란색 없애기 */
 
 a:link {
-    text-decoration: none;
-    color: rgb(35, 35, 35);
+    text-decoration: none !important;
+    color: rgb(35, 35, 35) !important;
 }
 
 a:visited {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:active {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .logname_in {
@@ -564,3 +567,9 @@ a:active {
 .line:hover {
     background-color: rgb(232, 232, 232);
 }
+
+.line {
+    position: relative;
+    height: 60px;
+}
+

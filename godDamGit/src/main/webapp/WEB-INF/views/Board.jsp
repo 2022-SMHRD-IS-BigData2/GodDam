@@ -36,10 +36,10 @@
 
     <div class="subhead">
         <div class="submenu">
-            <a href="#" class="arp headline1">수칙</a>
+            <a href="goMain.do" class="arp headline1">홈으로</a>
             <a href="#" class="arp headline1">상세지도 </a>
-            <a href="#" class="arp headline1">상세정보 </a>
-            <a href="#" class="arp headline1">방명록 </a>
+            <a href="GoBoardchart.do" class="arp headline1">상세차트 </a>
+            <a href="GoBoard.do" class="arp headline1">방명록 </a>
         </div>
     </div>
 

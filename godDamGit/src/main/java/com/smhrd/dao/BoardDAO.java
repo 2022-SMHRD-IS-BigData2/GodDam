@@ -41,4 +41,17 @@ public class BoardDAO {
 	         return board;
 	      }
 		
+		
+		
+		public BoardDTO BoardEditView (int num) {
+			
+			SqlSession session = sqlSessionFactory.openSession(true);
+			BoardDTO result = session.selectOne("BoardEditView", num);
+			
+			session.close();
+			return result;
+			
+		}
+		
+		
 }
