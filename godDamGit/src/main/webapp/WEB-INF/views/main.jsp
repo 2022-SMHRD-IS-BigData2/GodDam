@@ -110,7 +110,7 @@
 			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
 			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>전체 방문자 <img class="Wimg2" src="./assets/img/water2.png"></div>
-				<div class=""><%=session.getAttribute("ttlday") %></div>
+				<div class=""><%=session.getAttribute("ttlday") %>(+<%=session.getAttribute("today")%>)</div>
 				
 			</div>
 			<div style="display: inline-block; margin: 0 5px;  float: right;
