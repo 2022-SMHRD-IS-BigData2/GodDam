@@ -55,7 +55,7 @@ body{
     margin-bottom: 0px;
     position: relative;
     bottom: 34px;               /* 1227 김민석: 54~57줄 css변경 */
-
+	left: 260px;             /* 1228 김민석 : 정렬 맞추기 */
 }
 /* 맨 밑 */
 .foo{
@@ -266,7 +266,7 @@ body{
     position: relative;
       width: 200px;
    height: 100px;
-    left: 10px;
+    left: 165px;                   /* 1228 김민석: 정렬 맞춤 */
     border: 3px double #2f2f2f;
     padding: 10px 15px 10px 15px;
     line-height: 20px;
@@ -1132,6 +1132,53 @@ border-radius: 100%;
 
 
 
+/* 1228 김민석 : 1페이지 물 사용량 수칙 css 추가 */
+
+/* Non essential CSS - Just for example centering */
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+.center-outer {
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.center-inner {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+/* Essential CSS - Makes the effect work */
 
 
+.bubbles {
+display: inline-block;
+font-family: arial;
+position: relative;
+top: -15px;
+font-size: largel;
+}
 
+.bubbles h1 {
+position: relative;
+margin: 1em 0 0;
+font-family: 'Luckiest Guy', cursive;
+color: #49484d;
+z-index: 2;
+}
+
+.individual-bubble {
+position: absolute;
+border-radius: 100%;
+bottom: 10px;
+background-color: #8fcff1;
+z-index: 1;
+}
+
+.BC {
+	color: #5893da!important;
+	font-size: 30px !important;
+}
+
+/* 1228 김민석 : 1페이지 물 사용량 수칙 css 추가 */

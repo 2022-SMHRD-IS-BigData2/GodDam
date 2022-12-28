@@ -60,7 +60,7 @@ var frames = 0;
 
 ctx.lineWidth = 1;
 ctx.strokeStyle = "#000000";
-ctx.fillStyle = "#2f4f4f";
+ctx.fillStyle = "#000000";
 ctx.font = "14px monospace";
 
 var grd = ctx.createLinearGradient(0, 0, 0, cy);
@@ -461,7 +461,7 @@ series.dataFields.dateX = "months";
 series.dataFields.valueY = "2022년";
 // series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
 series.tooltipText = "[#000]2022년：{valueY.value}%[/]";
-series.tooltip.background.fill = am4core.color("#dc143c");
+series.tooltip.background.fill = am4core.color("#ff3333");
 series.tooltip.getStrokeFromObject = true;
 series.tooltip.background.strokeWidth = 3;
 series.tooltip.getFillFromObject = false;
@@ -475,7 +475,7 @@ series2.dataFields.dateX = "months";
 series2.dataFields.valueY = "2021년";  // 1227 김민석: 463줄, 477줄 데이터 변경
 // series2.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/motorcycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
 series2.tooltipText = "[#000]2021년：{valueY.value}%[/]";
-series2.tooltip.background.fill = am4core.color("#7cfc00");
+series2.tooltip.background.fill = am4core.color("#00bf00");
 series2.tooltip.getFillFromObject = false;
 series2.tooltip.getStrokeFromObject = true;
 series2.tooltip.background.strokeWidth = 3;
@@ -647,3 +647,52 @@ $('#boxicon').click(function(){
 
 
 
+
+// 1228 김민석: 1페이지 물 사용량 수칙 추가 js
+
+// Created for an Articles on:
+// https://www.html5andbeyond.com/bubbling-text-effect-no-canvas-required/
+
+jQuery(document).ready(function($){
+ 
+    // Define a blank array for the effect positions. This will be populated based on width of the title.
+    var bArray = [];
+    // Define a size array, this will be used to vary bubble sizes
+    var sArray = [5,10,15,20];
+ 
+    // Push the header width values to bArray
+    for (var i = 0; i < $('.bubbles').width(); i++) {
+        bArray.push(i);
+    }
+     
+    // Function to select random array element
+    // Used within the setInterval a few times
+    function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+ 
+    // setInterval function used to create new bubble every 350 milliseconds
+    setInterval(function(){
+         
+        // Get a random size, defined as variable so it can be used for both width and height
+        var size = randomValue(sArray);
+        // New bubble appeneded to div with it's size and left position being set inline
+        // Left value is set through getting a random value from bArray
+        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+         
+        // Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
+        // Callback function used to remove finsihed animations from the page
+        $('.individual-bubble').animate({
+            'bottom': '100%',
+            'opacity' : '-=0.7'
+        }, 3000, function(){
+            $(this).remove()
+        }
+        );
+ 
+ 
+    }, 350);
+ 
+});
+
+// 1228 김민석: 1페이지 물 사용량 수칙 추가 js
