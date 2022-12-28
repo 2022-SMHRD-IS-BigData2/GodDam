@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.controller.BoardWriteCon;
 //
 import com.smhrd.controller.Controller;
+import com.smhrd.controller.DetailDayCon;
 import com.smhrd.controller.GoBoardCon;
 import com.smhrd.controller.GoBoardEditCon;
 import com.smhrd.controller.GoBoardViewCon;
@@ -48,6 +49,7 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/DamList.do",new MapDamCon());
 		handlerMapping.put("/LastDam.do",new LastDamCon());
 		handlerMapping.put("/SelectDay.do", new SelectDayCon());// 1223 우종빈, ajax통신용 해시맵 객체 추가
+		handlerMapping.put("/DetailDay.do", new DetailDayCon());// 1228 안형철, ajax통신용 해시맵 객체 추가
 	
 //		
 //		// .put(Key,Value);

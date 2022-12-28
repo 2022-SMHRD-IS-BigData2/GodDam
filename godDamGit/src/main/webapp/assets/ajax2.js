@@ -28,8 +28,8 @@
 			
              $(".weatherarea").append(res.name);
              $(".weatherdes").append(res.weather[0].description);
-            $(".weatherhot").append("현재온도 : " + hot);
-            $(".weatherwind").append(("풍속 : " + res.wind.speed ));
+            $(".weatherhot").append("현재온도 : " + hot + "°");
+            $(".weatherwind").append(("풍속 : " + res.wind.speed + "m/s" ));
             $(".weathercloud").append(("구름  : "+ (res.clouds.all) +"%" ));
 
 

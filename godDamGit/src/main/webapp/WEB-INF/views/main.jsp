@@ -185,19 +185,27 @@
             <div id="map" style="width:90%;height:800px;"></div><!-- 1226 우종빈 -->
             </div>
         
+        <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 시작 --%>
             <div class="part2 scrllap_ap">
-				<select name="blood" id="damName">
-            		<option value="soyang">소양강댐</option>
-            		<option value="chungju">충주댐</option>
-            		<option value="hoengseong">횡성댐</option>
-            		<option value="daecheong">대청댐</option>
-        		</select>
-			<input type="text" id="startDate" name = "startDate">
-			<td>~</td>
-			<input type="text" id="endDate" name = "endDate">
-			<input type="submit" id="submit">
+            
+            	<div id="dm_select" style = "display : inline; width:168px ; height:50px ;font-size:25px;">
+            		일별<input type="radio" name = "radio" id="dayradio" value="일별">
+                    월별<input type="radio" name = "radio" id="monthradio" value="월별">
+                    <div id="selecttagin"></div>
+                    
+                    
+            	</div>
+            	
+        	
+		
         <%--1223 우종빈 댐, 기간 선택 태그 만듬 --%>
+            
+            <div id="detailchart" style="width:90%;height:600px;"></div>
+            <div id="detailtable" style="width:90%; height:200px;"></div>
+            
             </div>
+            
+        <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 끝 --%>  
         </div>
     </section>
 
@@ -310,6 +318,7 @@
     <script type="text/javascript" src="./assets/script.js"></script>
 	<script type="text/javascript" src="./assets/ajax.js"></script>
 	<script type="text/javascript" src="./assets/ajax2.js"></script>
+	<script type="text/javascript" src="./assets/ajax3.js"></script>
 	<script type="text/javascript" src="./assets/date_picker.js"></script>	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f1f4c8e6a3afcf5f5bfec0f271a2d10"></script>
 	<script type="text/javascript" src="./assets/map.js"></script> <!--1226 우종빈-->
