@@ -26,5 +26,12 @@ public class DayDetailDAO {
 		session.close();
 		return dateList; //1223(23~28) ajax 통신용 메서드 작성
 	}
+	
+	public DayDetailDTO detailday(DayDetailDTO dto) {
+		SqlSession session= sqlSessionFactory.openSession(true);
+		DayDetailDTO date = session.selectOne("detailday",dto);// 받아온 dto의 dam_name정보 사용
+		session.close();
+		return date; //1223(23~28) ajax 통신용 메서드 작성
+	}
 
 }
