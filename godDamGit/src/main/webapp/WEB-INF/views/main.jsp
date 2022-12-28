@@ -351,6 +351,8 @@
 	<script type="text/javascript" src="./assets/date_picker.js"></script>	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f1f4c8e6a3afcf5f5bfec0f271a2d10"></script>
 	<script type="text/javascript" src="./assets/map.js"></script> <!--1226 우종빈-->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
 </body>
 
 </html>
