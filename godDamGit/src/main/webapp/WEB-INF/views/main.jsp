@@ -30,11 +30,19 @@
 	<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
 	<%-- 1223 김민석: 스크립트,css 경로&링크 추가 --%>
 	
+	<%-- 1228 김민석: 스크립트, 폰트 경로 추가 --%>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-
+	<%-- 1228 김민석: 스크립트, 폰트 경로 추가 --%>
+	
+	<%-- 1228 김민석: 방문자 폰트 추가 --%>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+	<%-- 1228 김민석: 방문자 폰트 추가 --%>
+	
 	<%-- 1226 우종빈: map css추가 --%>
 	     <style>
 		.overlaybox {position:relative;width:130px;height:100px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/box_movie.png') no-repeat;padding:15px 10px;}
@@ -62,6 +70,10 @@
 
 </head>
 <body>
+
+	<div class=""></div>
+	<div class=""></div>
+	<div class=""></div>
     <!-- 세션1 시작 -->
     <div class="scrollap"> <%-- 1226 김민석: class -> id로 변경  // 1227 김민석: id -> class 다시 수정--%>
     
@@ -77,7 +89,7 @@
                        <div class = "weatherdes"> </div>
                          <div class = "weatherhot"> </div>
                        <div class = "weatherwind"> </div>
-                       <div id="top" class = "weathercloud"> </div> <%-- 1227 김민석: class -> id로 변경 --%>
+                       <div id="top" class = "weathercloud"> </div> <%-- 1227 김민석: id 추가 --%>
                   </div>     
                 </div>
 
@@ -86,11 +98,28 @@
                 <header class="bigName">GWANG JU WATER
                 </header>
                 
-             <div style="display: inline-block; margin: 0 10px;  float: right;">
-				<img src='https://ifh.cc/g/PAXVmT.png' border='0'>
-				<img src='https://ifh.cc/g/yACamP.png' border='0'>
-				<img src='https://ifh.cc/g/DlGhh0.png' border='0'>
+         <%-- 1228 김민석: 방문자 추가 --%>
+             <div style="display: inline-block; margin: 0 5px;  float: right;
+             border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+             padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
+				<div>1인당 물 사용량 <img class="Wimg4" src="./assets/img/water4.png"></div>
+				<div class="">302.2(-<img class="Wimg1" src="./assets/img/water1.png">3)</div>
+				
 			</div>
+			<div style="display: inline-block; margin: 0 5px;  float: right;
+			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
+				<div>전체 방문자 <img class="Wimg2" src="./assets/img/water2.png"></div>
+				<div class=""><%=session.getAttribute("ttlday") %></div>
+				
+			</div>
+			<div style="display: inline-block; margin: 0 5px;  float: right;
+			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
+				<div>오늘 방문자 <img class="Wimg3" src="./assets/img/water3.png"></div>
+				<div class=""><%=session.getAttribute("today") %> </div>
+			</div>
+			<%-- 1228 김민석: 방문자 추가 --%>
                 
                 <!-- 이스터에그 -->
                 <span class="logname">
@@ -136,7 +165,7 @@
 					<div class="center-inner">
 						<div class="bubbles">
 							<h1>광주 1인 1일 물 사용량:</h1>
-							<h1 class="BC">302 L/day(↑+3)</h1>
+							<h1 class="BC">302 L/day( <img class="up" src="./assets/img/up.png"> +3)</h1>
                 			<h1>목표 물 사용량:</h1>
                 			<h1 class="BC">240 L/day</h1>
                 			<h1>한국 평균 물 사용량:</h1>

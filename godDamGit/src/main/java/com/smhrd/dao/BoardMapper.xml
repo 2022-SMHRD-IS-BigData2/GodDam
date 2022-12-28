@@ -35,14 +35,14 @@
 	insert into TB_GUESTBOOK
 	values(
 		TB_GUESTBOOK_SEQ.nextval,
-		'1',
-		'1',
+		#{book_id},
+		#{book_pw},
 		#{book_title},
-		'1',
+		#{book_content},
 		sysdate,
 		'admin_id 1',
 		'1',
-		'1',
+		#{book_img},
 		'1'
 		
 	)
@@ -53,6 +53,14 @@
 	SELECT * FROM GUESTBOOK
 	WHERE RNUM = #{RNUM}
 	
+</select>
+
+
+<select id="BoardEditView" resultType="com.smhrd.entity.BoardDTO">
+	
+	select * from GUESTBOOK
+	WHERE RNUM = #{RNUM}
+
 </select>
 
 
