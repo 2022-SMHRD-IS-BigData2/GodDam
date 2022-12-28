@@ -81,6 +81,12 @@
                 <header class="bigName">GWANG JU WATER
                 </header>
                 
+             <div style="display: inline-block; margin: 0 10px;  float: right;">
+				<img src='https://ifh.cc/g/PAXVmT.png' border='0'>
+				<img src='https://ifh.cc/g/yACamP.png' border='0'>
+				<img src='https://ifh.cc/g/DlGhh0.png' border='0'>
+			</div>
+                
                 <!-- 이스터에그 -->
                 <span class="logname">
                 <div class="typing_demo">
