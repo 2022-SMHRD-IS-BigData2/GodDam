@@ -69,6 +69,17 @@
 	
 </select>
 
+<update id="BoardUpdate" parameterType="com.smhrd.entity.BoardDTO">
+
+	UPDATE TB_GUESTBOOK
+	SET BOOK_TITLE = #{book_title},
+	BOOK_CONTENT = #{book_content},
+	BOOK_IMG = #{book_img, jdbcType=VARCHAR}
+	WHERE BOOK_PW = 	#{book_pw}
+		
+
+</update>
+
 
 
 </mapper>
