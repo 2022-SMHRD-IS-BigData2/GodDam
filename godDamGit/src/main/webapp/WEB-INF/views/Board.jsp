@@ -49,8 +49,8 @@
     <div class="part1">
         <div class="board_wrap">
             <div class="board_top">
-                <div class="top_left bigName3">Guest Board</div>
-                <div class="top_right headline2">[공지사항] <br>으휴 이걸 처음부터 다 만드네</div>
+<!--                 <div class="top_left bigName3">Guest Board</div>
+ -->                <div class="top_right headline2">[공지사항] <br>광주 가뭄과 관련된 글을 써주세요</div>
             </div>
             <div class="board_list">
     
@@ -117,11 +117,11 @@
              -->
             
             <!-- 보드 버튼 -->
-            <div class="bt_wrap">
-                <a href="nwrite.html" class="on headline1 arp3">검색</a>
-                <!--<a href="#">수정</a>-->
+			<div class="logname_in">
+                <div class="typing_demo_in">
+                    여기는 방명록입니다
+                </div>
             </div>
-
             <div class="bt_wrap2">
                 <a href="GoWrite.do" class="on2 headline1 arp3">글쓰기</a>
                 <!--<a href="#">수정</a>-->

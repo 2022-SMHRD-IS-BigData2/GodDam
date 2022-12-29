@@ -601,7 +601,6 @@ var templist = [ak1, ak2, ak3]
 
 $('body').on('keydown', function (event) {
 
-  console.log(event);
 
   function movelr(e) {
     if (e == 37) {
