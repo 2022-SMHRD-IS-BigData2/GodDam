@@ -79,12 +79,12 @@
             <div class="board_page">
             <% 
             if(cnt != 0){
-            	int pageCount = cnt/ asd.size() + (cnt%asd.size()==0?0:1);
+            	int pageCount = cnt/ 5 + (cnt%5==0?0:1);
             	int pageBlock = 5;
             	int start = 1 + pageBlock*((currentpage-1)/pageBlock);
             	int end = start + pageBlock-1;
-            if(end > pageCount){
-            	end = pageCount;
+            	if(end >= pageCount){
+            		end = pageCount;
             	}
  			%>
                 <%-- <a href="#" onclick="<%start-=5;%>" class="bt first">--</a> --%>
@@ -95,14 +95,15 @@
 			<%} %>
             <%
             for(int i = start; i <=end; i++){ %>
-                <a href="#" onclick="postnum(<%=i%>)" class="num"><%=i%></a>
+            	if(end)
+                <a href="GoBoard.do?page=<%=i %>"  class="num"><%=i%></a>
             <% }%>
             <% if(end<pageCount){ %>
 				<a href="GoBoard.do?page=<%=start+pageBlock%>">Next</a>
 			<%} %>
 			
             <% }%>
-                
+                <%-- onclick="postnum(<%=i%>)" --%>
             
             </div>
             
