@@ -27,8 +27,11 @@
 		<%
 		BoardDTO board1 = (BoardDTO)request.getAttribute("board1");
 		
-		String asd = request.getParameter("rnum"); 
-		int rnum = Integer.parseInt(asd);
+		String asd = request.getParameter("seq"); 
+		int seq = Integer.parseInt(asd);
+		
+		String img = request.getParameter("img");
+		
 		%>
 	<div class="board_wrap">
 
@@ -46,7 +49,7 @@
 					<div class="info">
 						<div>
 							<div class="a1a headline3">번호</div>
-							<div class="a2a headline3" name="rnum"><%=rnum%></div>
+							<div class="a2a headline3" ><%=board1.getRnum()%></div>
 							<input name="seq" value="<%=board1.getBook_seq()%>" type="hidden">
 						</div>
 						<div>
@@ -61,7 +64,7 @@
 					</div>
 
 					<div class="page headline3">
-						<img src="<%=board1.getBook_img()%>" alt="이미지가 없습니다"	class="left_img">
+						<img src="images/<%=img%>" alt="이미지가 없습니다" class="left_img">
 						<div class="spacing"></div>
 						
 						 <textarea type="text" name="content" id="content" class="col3" >

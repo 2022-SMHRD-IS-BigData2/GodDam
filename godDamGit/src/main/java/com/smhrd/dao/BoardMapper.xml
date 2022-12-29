@@ -59,7 +59,7 @@
 <select id="BoardEditView" resultType="com.smhrd.entity.BoardDTO">
 	
 	select * from GUESTBOOK
-	WHERE RNUM = #{RNUM}
+	WHERE BOOK_SEQ = #{book_seq}
 
 </select>
 

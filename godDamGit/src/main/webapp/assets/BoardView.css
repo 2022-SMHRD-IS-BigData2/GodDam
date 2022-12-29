@@ -217,6 +217,8 @@
     float: left;
     padding-right: 5px;
     transform: 2s;
+    bottom:5px;
+    right:19px;
 }
 .spacing {
     width: 2.5%;
