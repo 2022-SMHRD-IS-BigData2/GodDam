@@ -46,7 +46,8 @@
 					<div class="info">
 						<div>
 							<div class="a1a headline3">번호</div>
-							<div class="a2a headline3"><%=rnum%></div>
+							<div class="a2a headline3" name="rnum"><%=rnum%></div>
+							<input name="seq" value="<%=board1.getBook_seq()%>" type="hidden">
 						</div>
 						<div>
 							<div class="a1a headline3">글쓴이</div>
@@ -68,7 +69,8 @@
                         </textarea>
                         
 						<div class="filebox">
-							<label for="file">이미지를 넣어주세요</label> <input type="file" id="file"  name="file">
+							<label for="file">이미지를 넣어주세요</label>
+							<input type="file" id="file"  name="file">
 						</div>
 
 					</div>

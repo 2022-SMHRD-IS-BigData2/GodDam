@@ -43,6 +43,9 @@ public class BoardEdit2con implements Controller {
 		String book_title = multi.getParameter("title");
 		String book_content = multi.getParameter("content");
 		String book_pw = multi.getParameter("pw");
+		String book_seq2 = multi.getParameter("seq");
+		
+		int book_seq = Integer.parseInt(book_seq2);
 		
 		// 이미지 파일의 이름 가져오기
 		// 이때, 파일 저장이 일어난다
@@ -55,9 +58,10 @@ public class BoardEdit2con implements Controller {
 		dto.setBook_pw(book_pw);
 		dto.setBook_title(book_title);
 		dto.setBook_content(book_content);
+		dto.setBook_seq(book_seq);
 		dto.setBook_img(book_img);
 		
-		System.out.println(dto);
+		System.out.println(book_seq);
 		
 		
 		// 3. DAO의 boardwrite사용

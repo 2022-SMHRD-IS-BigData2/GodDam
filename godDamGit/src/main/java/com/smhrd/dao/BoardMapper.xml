@@ -76,6 +76,7 @@
 	BOOK_CONTENT = #{book_content},
 	BOOK_IMG = #{book_img, jdbcType=VARCHAR}
 	WHERE BOOK_PW = 	#{book_pw}
+	AND BOOK_SEQ = #{book_seq}
 		
 
 </update>
