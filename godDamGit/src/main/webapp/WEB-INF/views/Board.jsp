@@ -98,7 +98,7 @@
             <% if(end<pageCount){ %>
 				<a href="GoBoard.do?page=<%=start+pageBlock%>">Next</a>
 			<%} %>
-            
+			
             <% }%>
                 
             
