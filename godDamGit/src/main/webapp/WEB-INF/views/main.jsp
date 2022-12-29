@@ -494,7 +494,7 @@
         <div class="part1_in scrllap_ap">
             
             <div class="page_top_in">
-            <div class="page_num_in bigName">04
+            <div class="page_num_in headline1_in">사진
             </div>
             <div class="page_title_in bigName"> picture
             </div>
@@ -542,8 +542,8 @@
 
             <!-- 오른쪽 아래 water글씨-->
             </div>
-            <div class="num_right_in bigName">
-                04
+            <div class="num_right_in headline1_in">
+                기사
             </div>
             <div class="title_right_in bigName">
                 WATER
@@ -572,7 +572,7 @@
       <!-- partial -->
     
     <!-- footer 밑 자막 -->
-    <footer class="foo"><div><marquee>"여기를 보시라구요....글씨가 커졌습니까?"</marquee></div></footer>
+    <footer class="foo"><div><marquee>"눈이 많이오더라도.... 저수량에 미치는 영향은 미미합니다"</marquee></div></footer>
 
 <%--1226 김민석: 스크롤 상단 버튼 추가 --%>
 	<div style="position:fixed; bottom:55px; right:20px; z-index:99;"> 

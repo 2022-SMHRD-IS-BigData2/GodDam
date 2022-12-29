@@ -47,7 +47,11 @@ function aname2(){
 }
 
 
-
+function dis_non() {
+  document.getElementsByClassName("typing_demo_in")[0].style.display="none";
+  
+}
+self.setTimeout("dis_non()",7000); // 1초: 1000
 
 
 
