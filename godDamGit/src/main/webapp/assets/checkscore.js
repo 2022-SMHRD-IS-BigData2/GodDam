@@ -124,14 +124,15 @@ $('#testsubmit').on("click",function(){
 	if(actscore>=100){
 		alert("대단하시네요! 만점입니다!");
 		answer=[];
-		location.reload();
+		$('.question').prop('checked',false);
 	}else if(actscore>=0){
 		alert("사용자님의 물절약 점수는 "+actscore+" 점 입니다.");
 		answer=[];
-		location.reload();
+		$('.question').prop('checked',false);
 	}else if(actscore<0){
 		alert("사용자님의 물절약 점수는 0점 입니다.");
 		answer=[];
+		$('.question').prop('checked',false);
 	}
 }
 
