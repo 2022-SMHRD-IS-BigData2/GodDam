@@ -302,8 +302,8 @@
         </div>
         </div>
         <div class="part2 scrllap_ap">
-            <form action="">
-    <table border="1" align="center" bgcolor="whitesmoke">
+
+   <table border="1" align="center" bgcolor="whitesmoke">
         <tr height="40" bgcolor="gray">
             <td colspan="2" height="35"> 
                 <font size="5"><h4 align="center"> 물절약 자가진단<div style="display: inline-flex; position:relative;top: 10px;">
@@ -342,7 +342,7 @@
                 <input type="radio" name="question 2" class="question 2" value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="question 2" class="question 2" value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="question 2" class="question 2" value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 2" class="question 2" value="30">
+                <input type="radio" name="question 2" class="question no 2" value="30">
            </td>
         </tr>
         <tr >
@@ -356,7 +356,7 @@
         <tr>
            <td align="center">
             <input type="radio" name="question 3" class="question 3" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 3" class="question 3" value="아니요">
+            <input type="radio" name="question 3" class="question no 3" value="아니요">
            </td>
         </tr>
         <tr >
@@ -370,7 +370,7 @@
         <tr>
            <td align="center">
             <input type="radio" name="question 4" class="question 4" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 4" class="question 4" value="아니요">
+            <input type="radio" name="question 4" class="question no 4" value="아니요">
            </td>
         </tr>
         <tr height="50" bgcolor="gray">
@@ -387,7 +387,7 @@
         <tr>
            <td align="center">
             <input type="radio" name="question 5" class="question 5" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 5" class="question 5" value="아니요">
+            <input type="radio" name="question 5" class="question no 5" value="아니요">
            </td>
         </tr>
         <tr >
@@ -401,7 +401,7 @@
         <tr>
            <td align="center">
             <input type="radio" name="question 6" class="question 6" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 6" class="question 6" value="아니요">
+            <input type="radio" name="question 6" class="question no 6" value="아니요">
            </td>
         </tr>
         <tr height="50" bgcolor="gray">
@@ -418,7 +418,7 @@
         <tr>
            <td align="center">
             <input type="radio" name="question 7" class="question 7" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 7" class="question 7" value="아니요">
+            <input type="radio" name="question 7" class="question no 7" value="아니요">
            </td>
         </tr>
         <tr >
@@ -443,16 +443,16 @@
                &nbsp;&nbsp; ▶&nbsp;&nbsp; 세탁은 며칠마다 하시나요?
             </td>
             <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;하루&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;이틀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;사흘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;나흘&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일주일
+                &nbsp;&nbsp;&nbsp;하루&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;이틀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;사흘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;나흘&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닷새
             </td>
         </tr>
         <tr>
            <td align="center">
-                <input type="radio" name="question 9" class="question 9" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question 9" value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;<input type="radio" name="question 9" class="question no 9" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="question 9" class="question no 9" value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="question 9" class="question 9" value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="radio" name="question 9" class="question 9" value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question 9" value="7">
+                <input type="radio" name="question 9" class="question 9" value="5">
            </td>
         </tr>
         <tr >
@@ -465,7 +465,7 @@
         </tr>
         <tr>
            <td align="center">
-            <input type="radio" name="question 10" class="question 10" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="question 10" class="question no 10" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="radio" name="question 10" class="question 10" value="아니요">
            </td>
         </tr>
@@ -479,8 +479,9 @@
         </tr>
     </table>
     
+    
 
-</form>
+
         
         
         
@@ -587,6 +588,7 @@
 	<script type="text/javascript" src="./assets/ajax.js"></script>
 	<script type="text/javascript" src="./assets/ajax2.js"></script>
 	<script type="text/javascript" src="./assets/ajax3.js"></script>
+	<script type="text/javascript" src="./assets/checkscore.js"></script>
 	<script type="text/javascript" src="./assets/date_picker.js"></script>	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f1f4c8e6a3afcf5f5bfec0f271a2d10"></script>
 	<script type="text/javascript" src="./assets/map.js"></script> <!--1226 우종빈-->
