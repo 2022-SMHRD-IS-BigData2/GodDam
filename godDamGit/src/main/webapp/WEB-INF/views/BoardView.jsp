@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="page headline3">
-                    <img src="<%= board.getBook_img() %>" alt="이미지가 없습니다" class="left_img">
+                    <img src="images/<%= board.getBook_img() %>" alt="이미지가 없습니다" class="left_img">
                     <div class="spacing"></div>
 					<%= board.getBook_content() %>
                 </div>
