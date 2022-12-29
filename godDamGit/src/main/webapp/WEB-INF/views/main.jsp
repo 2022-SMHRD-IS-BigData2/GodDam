@@ -216,7 +216,7 @@
         
         <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 시작 --%>
             <div class="part2 scrllap_ap">
-            
+             <div style = "width:168px ; height:80px"></div>
             	<div id="dm_select" style = "display : inline; width:168px ; height:50px ;
             	font-size:25px;">
             		일별<input type="radio" name = "radio" id="dayradio" value="일별">
