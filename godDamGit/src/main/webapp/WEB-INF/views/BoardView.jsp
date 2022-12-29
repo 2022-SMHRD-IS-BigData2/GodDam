@@ -64,7 +64,7 @@
             
             <div class="bt_wrap">
                 <a href="GoBoard.do" class="on headline1 arp3">목록</a>
-                <a href="BoardEdit.do?rnum=<%=board.getRnum()%>" class="on2 headline1 arp3">수정</a>
+                <a href="BoardEdit.do?rnum=<%=board.getRnum()%>&img=<%=board.getBook_img() %>" class="on2 headline1 arp3">수정</a>
             </div>
 
             

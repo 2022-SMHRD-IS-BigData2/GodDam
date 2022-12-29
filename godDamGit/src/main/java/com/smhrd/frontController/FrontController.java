@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.BoardEdit1con;
+import com.smhrd.controller.BoardEdit2con;
 import com.smhrd.controller.BoardWriteCon;
 //
 import com.smhrd.controller.Controller;
@@ -74,7 +75,8 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/BoardWrite.do", new BoardWriteCon());
 
 		
-		handlerMapping.put("/BoardEdit.do", new BoardEdit1con());
+		handlerMapping.put("/BoardEdit.do", new BoardEdit1con()); // 수정페이지 불러오기
+		handlerMapping.put("/BoardEdit2.do", new BoardEdit2con()); // 수정페이지 업데이트
 
 //		//===================
 	}

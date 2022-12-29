@@ -42,7 +42,7 @@
 		current_date,
 		'admin_id 1',
 		'1',
-		#{book_img},
+		#{book_img, jdbcType=VARCHAR},
 		'1'
 		
 	)
