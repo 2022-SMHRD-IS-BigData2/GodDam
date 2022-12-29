@@ -60,4 +60,14 @@ public class BoardDAO {
 			session.close();
 			return result;
 		}
+		
+		
+		public int BoardEditUpdate (BoardDTO dto) {
+			
+			SqlSession session = sqlSessionFactory.openSession(true);
+			int result = session.insert("BoardUpdate", dto);
+			
+			session.close();
+			return result;
+		}
 }

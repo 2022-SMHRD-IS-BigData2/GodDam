@@ -38,9 +38,9 @@
 
 			<div class="board_view">
 
-				<form id="frm" action="" method="post">
-					<div class="title headline2" id="title" contenteditable="true">
-						<%= board1.getBook_title() %>
+				<form id="frm" action="BoardEdit2.do" method="post" enctype="multipart/form-data">
+					<div class="title headline2">
+						<input type="text" id="title" name="title" class="col4" placeholder=<%= board1.getBook_title() %>>
 					</div>
 
 					<div class="info">
@@ -54,21 +54,21 @@
 						</div>
 						<div>
 							<div class="a1a headline3">비밀번호</div>
-							<div class="a2a2 headline3" contenteditable="true" id="pw"
-								name="pw">여기에 비밀번호입력</div>
+							<div class="a2a2 headline3">
+							<input type="text" id="pw" name="pw" class="col2" placeholder="여기에 비밀번호입력 해주세요"></div>
 						</div>
 					</div>
 
 					<div class="page headline3">
-						<img src="<%=board1.getBook_img()%>" alt="이미지가 없습니다"
-							class="left_img">
+						<img src="<%=board1.getBook_img()%>" alt="이미지가 없습니다"	class="left_img">
 						<div class="spacing"></div>
-						 <textarea type="text" name="content" id="content" class="col3" placeholder="">
+						
+						 <textarea type="text" name="content" id="content" class="col3" >
 						 <%=board1.getBook_content()%>
                         </textarea>
+                        
 						<div class="filebox">
-							<label for="file">이미지를 넣어주세요</label> <input type="file" id="file"
-								name="file">
+							<label for="file">이미지를 넣어주세요</label> <input type="file" id="file"  name="file">
 						</div>
 
 					</div>
@@ -76,9 +76,8 @@
 			</div>
 
 			<div class="bt_wrap">
-				<a href="GoBoard.do" class="on headline1 arp3">목록</a> <a
-					href="BoardEdit2.do" onclick="return chk_form()"
-					class="on2 headline1 arp3">작성</a>
+				<a href="GoBoard.do" class="on headline1 arp3">목록</a>
+				<a onclick="return chk_form()" class="on2 headline1 arp3">작성</a>
 			</div>
 
 		</div>
