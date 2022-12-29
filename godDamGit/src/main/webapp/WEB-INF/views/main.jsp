@@ -474,7 +474,7 @@
         <tr height="50">
             <td  colspan="2" align="center">
                 <input id="testsubmit"type="submit" value="제출">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" value="초기화">
+                <input type="reset" id=checkreset value="초기화">
             </td>
         </tr>
     </table>

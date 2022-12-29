@@ -139,5 +139,4 @@ $('#testsubmit').on("click",function(){
 
 $('#checkreset').on("click",function(){
 	$('.question').prop('checked',false);
-	
 })
