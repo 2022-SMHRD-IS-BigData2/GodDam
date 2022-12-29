@@ -38,7 +38,7 @@
     <div class="subhead">
         <div class="submenu">
             <a href="goMain.do" class="arp headline1">홈으로</a>
-            <a href="#" class="arp headline1">상세지도 </a>
+            <a onclick="aname2()" class="arp headline1">상세지도 </a>
             <a onclick="aname()" class="arp headline1">상세차트 </a>
             <a href="GoBoard.do" class="arp headline1">방명록 </a>
            
@@ -99,7 +99,7 @@
                 <a href="GoBoard.do?page=<%=i %>"  class="num"><%=i%></a>
             <% }%>
             <% if(end<pageCount){ %>
-				<a href="GoBoard.do?page=<%=start+pageBlock%>">Next</a>
+				<a href="GoBoard.do?page=<%=start+pageBlock%>">n</a>
 			<%} %>
 			
             <% }%>

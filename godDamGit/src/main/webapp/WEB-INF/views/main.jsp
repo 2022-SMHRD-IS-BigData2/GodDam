@@ -146,7 +146,7 @@
             </div> <!-- .subhead -->
         </div> <!-- .head -->
         
-        <section class="section1">
+        <section class="section1" id="chart123">
         <div name="main_part">
             <div class="part1 scrllap_ap">
             <%-- 1223 김민석: 메인 차트 추가 --%>
@@ -210,7 +210,7 @@
     <section class="section2">
         <div name="main_part ">
     
-            <div class="part1 scrllap_ap">
+            <div class="part1 scrllap_ap" id="map123">
             <div id="map" style="width:90%;height:800px;"></div><!-- 1226 우종빈 -->
             </div>
         

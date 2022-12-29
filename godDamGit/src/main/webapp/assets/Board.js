@@ -37,7 +37,12 @@ function postnum(page){
 
 
 function aname(){
-	 location.href="./goMain.do#chart"
+	 location.href="./goMain.do#chart123"
+
+}
+
+function aname2(){
+	 location.href="./goMain.do#map123"
 
 }
 
