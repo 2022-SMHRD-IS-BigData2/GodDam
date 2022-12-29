@@ -165,7 +165,7 @@
 					<div class="center-inner">
 						<div class="bubbles">
 							<h1>광주 1인 1일 물 사용량:</h1>
-							<h1 class="BC">302 L/day( <img class="up" src="./assets/img/up.png"> +3)</h1>
+							<h1 class="BC">302 L/day( <img class="down" src="./assets/img/up.png"> +3)</h1>
                 			<h1>목표 물 사용량:</h1>
                 			<h1 class="BC">240 L/day</h1>
                 			<h1>한국 평균 물 사용량:</h1>
@@ -217,7 +217,8 @@
         <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 시작 --%>
             <div class="part2 scrllap_ap">
             
-            	<div id="dm_select" style = "display : inline; width:168px ; height:50px ;font-size:25px;">
+            	<div id="dm_select" style = "display : inline; width:168px ; height:50px ;
+            	font-size:25px;">
             		일별<input type="radio" name = "radio" id="dayradio" value="일별">
                     월별<input type="radio" name = "radio" id="monthradio" value="월별">
                     <div id="selecttagin"></div>
