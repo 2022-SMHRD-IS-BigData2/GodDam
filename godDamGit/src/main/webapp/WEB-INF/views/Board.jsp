@@ -29,7 +29,8 @@
 
 	<% 
 		List<BoardDTO> asd = (List<BoardDTO>)request.getAttribute("list");
-		
+		int cnt = (int)request.getAttribute("cnt");
+		int currentpage = (int)request.getAttribute("page");
 	%>
 
     <div class="head bigName"> Guest Board </div>
@@ -70,33 +71,39 @@
     
             </div>
 			
-			
-			
-		
-			
             <!-- 보드 숫자 -->
-            <% 
-            int start = 1;
-            int asdlen = asd.size(); // 1
- 			int pagenum = asdlen%5==0 ? asdlen/5 : asdlen/5+1;
- 			%>
  			
- 			<form action="">
+ 			
             <div class="board_page">
-                <%-- <a href="#" onclick="<%start-=5;%>" class="bt first">--</a> --%>
-                <a href="#" class="bt prev">-</a>
-               
             <% 
-			for(int i = 0; i<5; i++) {	 
-			%>
+            if(cnt != 0){
+            	int pageCount = cnt/ asd.size() + (cnt%asd.size()==0?0:1);
+            	int pageBlock = 5;
+            	int start = 1 + pageBlock*((currentpage-1)/pageBlock);
+            	int end = start + pageBlock-1;
+            if(end > pageCount){
+            	end = pageCount;
+            	}
+ 			%>
+                <%-- <a href="#" onclick="<%start-=5;%>" class="bt first">--</a> --%>
+                <!-- <a href="#" class="bt prev">-</a>
+	            <a href="#" class="bt next">-</a> -->
+            <% if(start>pageBlock){ %>
+				<a href="GoBoard.do?page=<%=start-pageBlock%>">Prev</a>
+			<%} %>
+            <%
+            for(int i = start; i <=end; i++){ %>
+                <a href="#" onclick="postnum(<%=i%>)" class="num"><%=i%></a>
+            <% }%>
+            <% if(end<pageCount){ %>
+				<a href="GoBoard.do?page=<%=start+pageBlock%>">Next</a>
+			<%} %>
             
-                <a href="#" onclick="postnum(<%=start+i%>)" class="num"><%=i+1%></a>
+            <% }%>
                 
-            <% } %>
-            <a href="#" class="bt next">-</a>
-            <a href="#" class="bt last">--</a>
+            
             </div>
-            </form>
+            
             
             <!-- 
             1. 눌렀을 때 page 값을 1 2 3 4 5 로 보낸다

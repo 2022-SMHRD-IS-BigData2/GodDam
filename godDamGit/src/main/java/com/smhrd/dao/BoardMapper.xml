@@ -39,7 +39,7 @@
 		#{book_pw},
 		#{book_title},
 		#{book_content},
-		sysdate,
+		currunt_date,
 		'admin_id 1',
 		'1',
 		#{book_img},
@@ -61,6 +61,12 @@
 	select * from GUESTBOOK
 	WHERE RNUM = #{RNUM}
 
+</select>
+
+<select id="BoardCount" resultType="int">
+
+	SELECT count(*) FROM GUESTBOOK
+	
 </select>
 
 

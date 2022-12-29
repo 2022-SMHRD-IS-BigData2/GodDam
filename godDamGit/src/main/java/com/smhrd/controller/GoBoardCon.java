@@ -27,10 +27,13 @@ public class GoBoardCon implements Controller {
 		BoardDAO dao = new BoardDAO();
 		
 		List<BoardDTO> list = dao.list(page);
+		int num = dao.boardCount();
 		
+		request.setAttribute("cnt", num);
 		// 객체 바인딩
 		request.setAttribute("list", list);
 		
+		request.setAttribute("page", page);
 		
 		
 		

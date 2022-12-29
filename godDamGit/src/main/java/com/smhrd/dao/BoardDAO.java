@@ -53,5 +53,11 @@ public class BoardDAO {
 			
 		}
 		
-		
+		public int boardCount() {
+			SqlSession session =  sqlSessionFactory.openSession(true); // true 오토커밋
+			int result = session.selectOne("BoardCount");
+
+			session.close();
+			return result;
+		}
 }
