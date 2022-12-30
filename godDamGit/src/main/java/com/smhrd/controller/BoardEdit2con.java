@@ -31,8 +31,7 @@ public class BoardEdit2con implements Controller {
 				request, 
 				savePath,
 				maxSize,
-				encoding,
-				new DefaultFileRenamePolicy()// 중복된 파일 이름을 변경
+				encoding
 				
 				);
 				

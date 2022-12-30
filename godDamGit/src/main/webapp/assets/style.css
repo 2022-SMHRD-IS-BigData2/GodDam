@@ -286,13 +286,18 @@ headline1:hover {
 
 /* 메뉴바 */
 .arp {
-	text-decoration: none;
+	text-decoration: none; color: black;
+    
 	color: var(- -body-color);
 	margin-right: 20px;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 }
+.arp a:visited {
+	text-decoration: none;
+}
+
 /* 메뉴바 */
 .sub_menu {
 	font-family: 'Noto Sans KR', sans-serif;
@@ -315,13 +320,18 @@ headline1:hover {
 
 /* 좌측 홈 */
 .arp2 {
-	text-decoration: none;
+	text-decoration: none; color: black;
 	color: var(- -body-color);
 	margin-right: 20px;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 }
+
+.arp2:visited {
+	text-decoration: none;
+}
+
 
 .sub_menu_left {
 	font-family: 'Noto Sans KR', sans-serif;

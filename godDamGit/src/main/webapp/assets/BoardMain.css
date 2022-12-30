@@ -115,7 +115,15 @@ body {
 .board_list .title {
     width: 60%;
     text-align: left;
+    text-decoration: none; color: black;
+	
+	
 }
+    
+
+
+
+
 
 .board_list .top .title {
     text-align: center;
@@ -461,21 +469,30 @@ body {
 
 /* a링크 파란색 없애기 */
 
-a:link {
-    text-decoration: none !important;
-    color: rgb(35, 35, 35) !important;
+
+.title .link_non {
+  text-decoration: none black;
+}
+
+
+.title .link_non:link {
+ text-decoration: none;
+}
+
+
+.title .link_non:visited {
+text-decoration: none !important;
+color:black !important;
+}
+
+a{
+	text-decoration: none black;
+	color:black;
 }
 
 a:visited {
-    text-decoration: none !important;
-}
-
-a:hover {
-    text-decoration: none !important;
-}
-
-a:active {
-    text-decoration: none !important;
+	text-decoration: none !important;
+	color:black !important;
 }
 
 .logname_in {
