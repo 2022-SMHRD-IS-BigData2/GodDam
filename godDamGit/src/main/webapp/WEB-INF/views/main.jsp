@@ -514,11 +514,13 @@
     	        int randomIndex = random.nextInt(Picimg.size());
     			
     	        String Picimgf =Picimg.get(randomIndex); */
-    	        System.out.print(Picimg);
+    	        /* System.out.print(PicTitle); */
     			%>
     			<!-- 여기까지는 된다 값을 출력해보면 들어간 것을 확인-->
     			
     			<div class="imglist_in" id="imglist_in"><%=Picimg%></div>
+    			<div class="Namelist_in" id="Namelist_in"><%=Picid%></div>
+    			<div class="Titlelist_in" id="Titlelist_in"><%=PicTitle%></div>
 
       <section class="section4 scrllap_ap">
         <!-- 메인파트 아랫공간때문에 따로 css 추가됨 -->
@@ -541,7 +543,7 @@
                             alt="images">
                     </div>
                     <div class="details_in">
-                        <h2>JongBin is Famous<br><span>Hansot Director</span></h2>
+                        <h2 id="c_in2">JongBin is Famous<br></h2><h2 id="c_in1" class="fin_in">Hansot Director</h2>
                     </div>
                 </div>
             </div> 
@@ -583,8 +585,8 @@
 
             <!-- 오른쪽 아래 타이핑-->
             <div class="logname_in">
-                <div class="typing_demo_in">
-                    JONGBIN IS FAMOUS
+                <div class="typing_demo_in" id="c_id1">
+                   생활속 물절약이 가장 중요합니다
                 </div>
             </div>
         </div>

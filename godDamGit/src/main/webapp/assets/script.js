@@ -577,15 +577,30 @@ var testlist = [testimg, testimg2]
 var templist = [ak1, ak2, ak3]
 
 $('body').on('keydown', function (event) {
-
-
+  
+  	const photo = document.querySelectorAll('.imglist_in')
+	const name = document.querySelectorAll('.Namelist_in')
+	const title = document.querySelectorAll('.Titlelist_in')
+	//const ranPhotor
+	var asd = photo[0].innerHTML.replace("[","").replace("]","").split(", ")
+	var asd2 = name[0].innerHTML.replace("[","").replace("]","").split(", ")
+	var asd3 = title[0].innerHTML.replace("[","").replace("]","").split(", ")
+	
+	var ranIndex =Math.floor(Math.random()*asd.length)
+	
   function movelr(e) {
     if (e == 37) {
-      $('#ab').html(templist[0])
-      cat.setAttribute('src',testlist[0])
+        $('#ab').html(templist[0])
+     	document.getElementById("b").src = asd[ranIndex]
+		document.getElementById("c_in1").innerHTML = asd2[ranIndex]
+		document.getElementById("c_in2").innerHTML = asd3[ranIndex]
+		document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
     }else if (e == 39) {
       $('#ab').html(templist[1])
-      cat.setAttribute('src',testlist[1])
+    		document.getElementById("b").src = asd[ranIndex]
+		document.getElementById("c_in1").innerHTML = asd2[ranIndex]
+		document.getElementById("c_in2").innerHTML = asd3[ranIndex]
+		document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
 
     }
   }
@@ -655,13 +670,22 @@ clicky.addEventListener("click", () => {
 function ranPhoto() {
 	
 	const photo = document.querySelectorAll('.imglist_in')
+	const name = document.querySelectorAll('.Namelist_in')
+	const title = document.querySelectorAll('.Titlelist_in')
 	//const ranPhotor
 	var asd = photo[0].innerHTML.replace("[","").replace("]","").split(", ")
+	var asd2 = name[0].innerHTML.replace("[","").replace("]","").split(", ")
+	var asd3 = title[0].innerHTML.replace("[","").replace("]","").split(", ")
 	
 	var ranIndex =Math.floor(Math.random()*asd.length)
 	
 	document.getElementById("b").src = asd[ranIndex]
-	console.log(ranIndex)
+	document.getElementById("c_in1").innerHTML = asd2[ranIndex]
+	document.getElementById("c_in2").innerHTML = asd3[ranIndex]
+	document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
+	
+	
+	console.log(title)
 	console.log(asd[ranIndex])
 }
 
