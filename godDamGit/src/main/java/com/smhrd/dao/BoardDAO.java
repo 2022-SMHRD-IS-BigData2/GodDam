@@ -70,4 +70,16 @@ public class BoardDAO {
 			session.close();
 			return result;
 		}
+		
+		public List<BoardDTO> BoardList () {
+			
+			SqlSession session =  sqlSessionFactory.openSession(true); // true 오토커밋
+			List<BoardDTO> result = session.selectList("Picture");
+
+			session.close();
+			return result;
+			
+			}
+		
+		
 }

@@ -82,5 +82,11 @@
 </update>
 
 
+<select id="Picture" resultType="com.smhrd.entity.BoardDTO">
+	SELECT * FROM TB_GUESTBOOK
+	WHERE BOOK_IMG IS NOT NULL
+</select>
+
+
 
 </mapper>

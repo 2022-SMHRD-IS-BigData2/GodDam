@@ -629,6 +629,68 @@ $('body').on('keydown', function (event) {
  // 1초: 1000
 
 
+
+
+// 수정중...
+
+
+ //var tmp1 = '${변수}'; 
+//var PicS = <%=PicSize%>;
+
+var imgArray= new Array();
+var nameArray= new Array();
+var titleArray= new Array();
+//   imgArray.push("<%=Picimg%>")
+//   nameArray.push("<%=Picid%>")
+//   titleArray.push("PicTitle")
+ 
+ 
+console.log(PicS)
+
+
+let clicky = document.querySelector(".clikPic");
+
+//clicky.addEventListenr("click", function() {
+//var result = Math.floor( ( Math.random() * PicS ) )
+//click.setAttribute("src", imgArray[result])
+	
+//})
+
+//clicky.addEventListener("click", ranPhoto(adres) {
+	
+//	return adres;
+//})
+/*
+function changePhoto(adres) {
+
+	
+	ranPhoto.src = 'Pic_photo.jpg'
+}
+
+clicky.addEventListener("click", () => {
+	
+	changePhoto(imglist_in)
+})
+
+*/
+// var adres = document.getElementById('imglist_in').innerText
+
+function ranPhoto() {
+	
+	const photo = document.querySelectorAll('.imglist_in')
+	//const ranPhotor
+	var asd = photo[0].innerHTML.replace("[","").replace("]","").split(", ")
+	
+	var ranIndex =Math.floor(Math.random()*asd.length)
+	
+	document.getElementById("b").src = asd[ranIndex]
+	console.log(ranIndex)
+	console.log(asd[ranIndex])
+}
+
+
+
+
 // 1226 김민석 : 스크롤 상단 버튼 추가 js 
 $(window).scroll(function(){
 	if ($(this).scrollTop() > 300){

@@ -454,7 +454,7 @@ body {
 
 .headline2:hover {
     color: rgb(46, 45, 45) !important;
-    background: rgb(170, 170, 170);
+    background: rgb(78 143 250 / 86%);
     transition: 1.5s;
 }
 
@@ -599,7 +599,7 @@ logname {
    border-right: 5px solid;
 
    font-family: 'Noto Sans KR', sans-serif;
-   font-size: 17px; 
+   font-size: 16px; 
    display: inline;
 }
  

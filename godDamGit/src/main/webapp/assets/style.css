@@ -906,8 +906,9 @@ margin-top: 5px;
 .textbox2_in {
   position: relative;
   height: 40%;
-  width: 100%;
+  width: 91%;
   background-color: #21239300;
+  padding-left:20px;
   
   color: #3a3a3a;
 
@@ -1225,4 +1226,13 @@ z-index: 1;
 headline1:hover {
   color: white !important;
   background: rgb(28, 34, 47);
+  
+
+}
+
+
+
+
+.imglist_in {
+	display: none;
 }

@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.entity.BoardDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -70,6 +73,9 @@
 
 </head>
 <body>
+	<!-- 게시판 데이터를 가져오기 위한 것 12-29 일남 -->
+	<% List<BoardDTO> PicList = (List<BoardDTO>)request.getAttribute("Boardlist"); %>
+
 
 	<div class=""></div>
 	<div class=""></div>
@@ -488,6 +494,30 @@
         </div>
 
     </section> 
+    		<%int PicSize=PicList.size();%>
+    
+    
+    			<%
+    			ArrayList<String> Picimg = new ArrayList<>();
+    			ArrayList<String> Picid = new ArrayList<>();
+    			ArrayList<String> PicTitle = new ArrayList<>();
+    			
+    			
+    			for(int i=0; i<PicSize; i++) {
+    			Picimg.add(PicList.get(i).getBook_img());
+    			Picid.add(PicList.get(i).getBook_id());
+    			PicTitle.add(PicList.get(i).getBook_title());
+    			
+    			}
+    		    /* Random random = new Random();
+    	        int randomIndex = random.nextInt(Picimg.size());
+    			
+    	        String Picimgf =Picimg.get(randomIndex); */
+    	        System.out.print(Picimg);
+    			%>
+    			<!-- 여기까지는 된다 값을 출력해보면 들어간 것을 확인-->
+    			
+    			<div class="imglist_in" id="imglist_in"><%=Picimg%></div>
 
       <section class="section4 scrllap_ap">
         <!-- 메인파트 아랫공간때문에 따로 css 추가됨 -->
@@ -504,9 +534,9 @@
             
 
              <div class="box_in">
-                <div class="card_in">
+                <div class="card_in" onclick="ranPhoto()">
                     <div class="imgBx_in">
-                        <img id="b" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMXOnlGaUlhGc-eZw9HYnnnHCT44JBNaPGCA&usqp=CAU"
+                        <img id="b" class=clikPic src="http://www.mdilbo.com/lib/thumb.html?type=file&w=500&src=202211/29/20221129160532949562.jpg"
                             alt="images">
                     </div>
                     <div class="details_in">
