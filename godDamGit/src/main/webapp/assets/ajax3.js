@@ -331,7 +331,7 @@ $('#monthradio').on('click', function() { // ajax로 damList 만들기
 					<td align="center">`+ res3.m_vow + `</td>
 					<td align="center">`+ res3.m_level + `</td>
 					<td align="center">`+ res3.m_vow_rate + `</td>
-					<td align="center">`+ res.m_inflow + `</td>
+					<td align="center">`+ res3.m_inflow + `</td>
 					<td align="center">`+ res3.m_ttl_outflow + `</td>
 						</tr>`
 						)
