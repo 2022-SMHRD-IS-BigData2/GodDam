@@ -251,10 +251,11 @@
 
     <section class="section3">
         <div name="main_part"></div>
-        <div class="part1 scrllap_ap">
-         <div class="savewater_div_title"style="height:5%;width:100%;align-items: center;display: flex;background-color:gray;">
+        <div class="part1 scrllap_ap" style="position: relative;
+    top: -30px;">
+         <div class="savewater_div_title"style="height:5%;width:100%;align-items: center;display: flex;background-color:gray; ">
         <h1 style="align-items: center;position: relative;text-align: center;">물 절약 방법 best 3</h1>
-        <a style="position: relative;right:-50px" href="">상세 수칙 보러가기</a>
+        <a style="position: relative;right:-50px" href="GoRule.do">상세 수칙 보러가기</a>
         </div>
         <div class="savewater_div" style="height: 30%;width:100%;display:flex;position: relative;">
         	<div style="height: 100%;width:40%;">
@@ -262,10 +263,10 @@
 					<img alt="" src="./assets/img/h4.png" style="width: 100%;height: 100%;position: relative;">
        	
         	</div>
-        	 <div style="height: 100%;width:60%;">
+        	 <div style="height: 100%;width:60%; ">
 				<div class="savewater_div2" style="height: 100%;width:100%;background-color:gray;position: relative;top:-16px">
 					<div style="height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;">머리 감을 때,비누질 할 때 수도를 잠그는 것으로</h3>
+						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>머리 감을 때,비누질 할 때 수도를 잠그는 것으로</h3>
 						<h2 class="savewater" style="position: relative;text-align: center;">하루 30 L의 물을 아낄 수 있습니다!</h2>
 						<br>
 						<h3 class="savewater" style="position: relative;text-align: center;">추가로 샤워시간을 줄일 때마다</h3>
@@ -283,7 +284,7 @@
         	 <div style="height: 100%;width:60%;">
 				<div class="savewater_div2" style="height: 100%;width:100%;background-color:gray;position: relative;top:-16px">
 					<div class="savewater_div3" style="	height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;">행굼을 두 번 한다고 세탁이 잘되진 않습니다.</h3>
+						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>행굼을 두 번 한다고 세탁이 잘되진 않습니다.</h3>
 						<h2 class="savewater" style="position: relative;text-align: center;">10kg 세탁기 행굼 한번에 90L 사용! </h2>
 						<br>
 						<h3 class="savewater" style="position: relative;text-align: center;">세탁 효과를 높이기 위해선 세탁기 용량의</h3>
@@ -301,7 +302,7 @@
         	 <div style="height: 100%;width:60%;">
 				<div class="savewater_div2" style="height:100%;width:100%;background-color:gray;position: relative;top:-16px">
 					<div class="savewater_div3" style="	height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;">양치하며 물을 틀어두시나요?</h3>
+						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>양치하며 물을 틀어두시나요?</h3>
 						<h2 class="savewater" style="position: relative;text-align: center">양치컵 사용시 회당 5L 이상 절약!</h2>
 						<br>
 						<h3 class="savewater" style="position: relative;text-align: center;">공공장소에서도 수도를 계속 쓰시기보다</h3>
