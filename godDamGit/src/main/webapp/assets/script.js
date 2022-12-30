@@ -243,31 +243,7 @@ function animateChart() {
 requestId = window.requestAnimationFrame(animateChart);
 
 /////// EVENTS //////////////////////
-c.addEventListener("mousemove", function(e) {
-  label.innerHTML = "";
-  label.style.display = "none";
-  this.style.cursor = "default";
 
-  var m = oMousePos(this, e);
-  for (var i = 0; i < oDots.length; i++) {
-
-    output(m, i);
-  }
-
-}, false);
-
-function output(m, i) {
-  ctx.beginPath();
-  ctx.arc(oDots[i].x, oDots[i].y, 20, 0, 2 * Math.PI);
-  if (ctx.isPointInPath(m.x, m.y)) {
-    //console.log(i);
-    label.style.display = "block";
-    label.style.top = (m.y + 10) + "px";
-    label.style.left = (m.x + 10) + "px";
-    label.innerHTML = "<strong>" + propsRy[i] + "</strong>: " + valuesRy[i] + "%";
-    c.style.cursor = "pointer";
-  }
-}
 
 // CURVATURE
 function controlPoints(p) {
