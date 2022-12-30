@@ -53,6 +53,7 @@
                 <li id="nav-portfolio"><a href="#portfolio">부엌에서</a></li>
                 <li id="nav-contact"><a href="#contact">빨래할 때</a></li>
                 <li id="nav-contact2"><a href="#contact2">욕실에서</a></li>
+                <li id="nav-contact3"><a href="goMain.do">메인으로</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
