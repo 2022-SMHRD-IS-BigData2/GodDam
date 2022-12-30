@@ -209,7 +209,7 @@ $('#monthradio').on('click', function() { // ajax로 damList 만들기
 				$('#damName').append(`<option value='` + res[i].dam_name + `'>` + res[i].dam_namekor + `</option>`)
 			};
 
-			for (var i = 2019; i < 2023; i++) {
+			for (var i = 2020; i < 2023; i++) {
 				$('#yearselect').append(`<option value='` + i + `'>` + i + `</option>`)
 			};
 
