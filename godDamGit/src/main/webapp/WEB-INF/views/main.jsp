@@ -46,6 +46,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
 	<%-- 1228 김민석: 방문자 폰트 추가 --%>
 	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+	
 	<%-- 1226 우종빈: map css추가 --%>
 	     <style>
 		.overlaybox {position:relative;width:130px;height:100px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/box_movie.png') no-repeat;padding:15px 10px;}
@@ -157,7 +161,7 @@
         <div name="main_part">
             <div class="part1 scrllap_ap">
             <%-- 1223 김민석: 메인 차트 추가 --%>
-              	<div id="tit1">주암댐 저수율 전년도 비교</div>
+              	<div id="tit1" style="font-family: 'Hi Melody', cursive; font-size:60px;">주암댐 저수율 전년도 비교</div>
                 	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     				<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
     				<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
@@ -197,7 +201,7 @@
                 <div class="collumn3">
                     <%-- 1223 김민석: 서브 차트3 추가 --%>
                     <main class="containers">
-  						<h3 id="tit3">연별 주암댐 저수율 데이터(%)</h3> <%-- 1227 김민석 : 이름 변경 --%>
+  						<h3 id="tit3" >연별 주암댐 저수율 데이터(%)</h3> <%-- 1227 김민석 : 이름 변경 --%>
   						<div>
     					<canvas id="barChart"></canvas>
   						</div>
@@ -205,8 +209,8 @@
 					<%-- 1223 김민석: 서브 차트3 추가 --%>
                 </div>
 
-                <div class="collumn4">
-                     <canvas id="myChart"></canvas> <%-- 1223 김민석: 서브 차트4 추가 --%>
+                <div class="collumn4 ">
+                     <canvas id="myChart">실시간 주암댐 데이터</canvas> <%-- 1223 김민석: 서브 차트4 추가 --%>
                 </div>
         
             </div>
@@ -246,7 +250,7 @@
     </section>
 
     <section class="section3">
-        <div id="3page" name="main_part"></div>
+        <div name="main_part"></div>
         <div class="part1 scrllap_ap">
          <div class="savewater_div_title"style="height:5%;width:100%;align-items: center;display: flex;background-color:gray;">
         <h1 style="align-items: center;position: relative;text-align: center;">물 절약 방법 best 3</h1>
@@ -308,7 +312,7 @@
         	</div>
         </div>
         </div>
-        <div class="part2 scrllap_ap">
+        <div id="3page" class="part2 scrllap_ap">
 
    <table border="1" align="center" bgcolor="whitesmoke">
         <tr height="40" bgcolor="gray">
