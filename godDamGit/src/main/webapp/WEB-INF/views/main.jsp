@@ -145,9 +145,9 @@
             
                 <!-- 오른쪽 메뉴 -->
                 <nav class="sub_menu" >
-                <a href="#" class="arp"><span>수칙</span> </a>
-                <a href="#map" class="arp"><span>상세지도</span> </a>
-			    <a href="#3page" class="arp">상세정보 </a>
+                <a href="#map" class="arp"><span>상세지도</span></a>
+			    <a href="GoRule.do" class="arp">상세수칙 </a>
+                <a href="#3page" class="arp"><span>설문조사</span> </a>
 			    <a href="GoBoard.do" class="arp">방명록 </a>
                 </nav>
             </div> <!-- .subhead -->
