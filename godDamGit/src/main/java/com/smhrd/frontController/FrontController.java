@@ -24,6 +24,7 @@ import com.smhrd.controller.GoBoardEditCon;
 import com.smhrd.controller.GoBoardViewCon;
 import com.smhrd.controller.GoBoardWriteCon;
 import com.smhrd.controller.GoMainCon;
+import com.smhrd.controller.GoRuleCon;
 import com.smhrd.controller.GoWindowCon;
 import com.smhrd.controller.LastDamCon;
 import com.smhrd.controller.MapDamCon;
@@ -54,7 +55,6 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/SelectDay.do", new SelectDayCon());// 1223 우종빈, ajax통신용 해시맵 객체 추가
 		handlerMapping.put("/DetailDay.do", new DetailDayCon());// 1228 안형철, ajax통신용 해시맵 객체 추가
 		handlerMapping.put("/DetailMonth.do", new DetailMonthCon());// 1229 안형철, ajax통신용 해시맵 객체 추가
-	
 //		
 //		// .put(Key,Value);
 		handlerMapping.put("/goMain.do", new GoMainCon());
@@ -76,6 +76,7 @@ public class FrontController extends HttpServlet {
 
 		handlerMapping.put("/BoardWrite.do", new BoardWriteCon());
 
+		handlerMapping.put("/GoRule.do",new GoRuleCon()); //1230 우종빈 추가
 		
 		handlerMapping.put("/BoardEdit.do", new BoardEdit1con()); // 수정페이지 불러오기
 		handlerMapping.put("/BoardEdit2.do", new BoardEdit2con()); // 수정페이지 업데이트
