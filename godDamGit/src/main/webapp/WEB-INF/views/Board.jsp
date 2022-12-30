@@ -38,17 +38,19 @@
     <div class="subhead">
         <div class="submenu">
             <a href="goMain.do" class="arp headline1">홈으로</a>
-            <a href="#" class="arp headline1">상세지도 </a>
-            <a href="GoBoardchart.do" class="arp headline1">상세차트 </a>
+            <a onclick="aname2()" class="arp headline1">상세지도 </a>
+            <a onclick="aname()" class="arp headline1">상세차트 </a>
             <a href="GoBoard.do" class="arp headline1">방명록 </a>
+           
+            
         </div>
     </div>
 
     <div class="part1">
         <div class="board_wrap">
             <div class="board_top">
-                <div class="top_left bigName3">Guest Board</div>
-                <div class="top_right headline2">[공지사항] <br>으휴 이걸 처음부터 다 만드네</div>
+<!--                 <div class="top_left bigName3">Guest Board</div>
+ -->                <div class="top_right headline2">[공지사항] <br>광주 가뭄과 관련된 글을 써주세요</div>
             </div>
             <div class="board_list">
     
@@ -77,12 +79,12 @@
             <div class="board_page">
             <% 
             if(cnt != 0){
-            	int pageCount = cnt/ asd.size() + (cnt%asd.size()==0?0:1);
+            	int pageCount = cnt/ 5 + (cnt%5==0?0:1);
             	int pageBlock = 5;
             	int start = 1 + pageBlock*((currentpage-1)/pageBlock);
             	int end = start + pageBlock-1;
-            if(end > pageCount){
-            	end = pageCount;
+            	if(end >= pageCount){
+            		end = pageCount;
             	}
  			%>
                 <%-- <a href="#" onclick="<%start-=5;%>" class="bt first">--</a> --%>
@@ -93,14 +95,15 @@
 			<%} %>
             <%
             for(int i = start; i <=end; i++){ %>
-                <a href="#" onclick="postnum(<%=i%>)" class="num"><%=i%></a>
+            	if(end)
+                <a href="GoBoard.do?page=<%=i %>"  class="num"><%=i%></a>
             <% }%>
             <% if(end<pageCount){ %>
-				<a href="GoBoard.do?page=<%=start+pageBlock%>">Next</a>
+				<a href="GoBoard.do?page=<%=start+pageBlock%>">n</a>
 			<%} %>
-            
+			
             <% }%>
-                
+                <%-- onclick="postnum(<%=i%>)" --%>
             
             </div>
             
@@ -114,11 +117,11 @@
              -->
             
             <!-- 보드 버튼 -->
-            <div class="bt_wrap">
-                <a href="nwrite.html" class="on headline1 arp3">검색</a>
-                <!--<a href="#">수정</a>-->
+			<div class="logname_in">
+                <div class="typing_demo_in">
+                    여기는 방명록입니다
+                </div>
             </div>
-
             <div class="bt_wrap2">
                 <a href="GoWrite.do" class="on2 headline1 arp3">글쓰기</a>
                 <!--<a href="#">수정</a>-->

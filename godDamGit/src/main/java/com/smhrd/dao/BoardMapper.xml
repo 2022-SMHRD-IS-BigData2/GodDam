@@ -39,10 +39,10 @@
 		#{book_pw},
 		#{book_title},
 		#{book_content},
-		currunt_date,
+		current_date,
 		'admin_id 1',
 		'1',
-		#{book_img},
+		#{book_img, jdbcType=VARCHAR},
 		'1'
 		
 	)
@@ -59,7 +59,7 @@
 <select id="BoardEditView" resultType="com.smhrd.entity.BoardDTO">
 	
 	select * from GUESTBOOK
-	WHERE RNUM = #{RNUM}
+	WHERE BOOK_SEQ = #{book_seq}
 
 </select>
 
@@ -67,6 +67,24 @@
 
 	SELECT count(*) FROM GUESTBOOK
 	
+</select>
+
+<update id="BoardUpdate" parameterType="com.smhrd.entity.BoardDTO">
+
+	UPDATE TB_GUESTBOOK
+	SET BOOK_TITLE = #{book_title},
+	BOOK_CONTENT = #{book_content},
+	BOOK_IMG = #{book_img, jdbcType=VARCHAR}
+	WHERE BOOK_PW = 	#{book_pw}
+	AND BOOK_SEQ = #{book_seq}
+		
+
+</update>
+
+
+<select id="Picture" resultType="com.smhrd.entity.BoardDTO">
+	SELECT * FROM TB_GUESTBOOK
+	WHERE BOOK_IMG IS NOT NULL
 </select>
 
 

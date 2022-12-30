@@ -50,7 +50,7 @@ body {
     position: relative;
     background-color: rgba(176, 142, 142, 0);
     width: 100%;
-    height: 100px;
+    height: 85px;
 }
 
 .top_left {
@@ -68,7 +68,7 @@ body {
 .top_right {
     position: relative;
     background-color: rgba(123, 185, 84, 0);
-    width: 60%;
+    width: 100%;
     height: 100%;
     float: left;
     text-align: center;
@@ -342,6 +342,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size:18px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .arp:hover {
@@ -420,7 +421,7 @@ body {
     font-size: 45px;
     text-transform: uppercase;
     text-align: center;
-    line-height: 85px;
+    line-height: 100px;
 }
 
 
@@ -453,7 +454,7 @@ body {
 
 .headline2:hover {
     color: rgb(46, 45, 45) !important;
-    background: rgb(170, 170, 170);
+    background: rgb(78 143 250 / 86%);
     transition: 1.5s;
 }
 
@@ -573,3 +574,43 @@ a:active {
     height: 60px;
 }
 
+logname {
+   height: 40px;
+   /*This part is important for centering*/
+   place-items: center;
+   font-family: 'Playfair Display', serif; 
+   font-size: 10px; 
+}
+
+/* 여기서부터 타이핑 */
+.typing_demo_in{
+   position:relative;
+   height: 29px;
+   width: 148PX;
+   bottom: 45px;
+   left: -375px;
+
+   position: absolute;
+   animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+   
+   white-space: nowrap;
+   overflow: hidden;
+
+   border-right: 5px solid;
+
+   font-family: 'Noto Sans KR', sans-serif;
+   font-size: 16px; 
+   display: inline;
+}
+ 
+@keyframes typing {
+   from {
+     width: 0
+   }
+}
+     
+@keyframes blink {
+   50% {
+     border-color: transparent
+   }
+}

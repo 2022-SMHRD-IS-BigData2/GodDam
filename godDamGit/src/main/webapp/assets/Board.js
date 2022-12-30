@@ -37,6 +37,27 @@ function postnum(page){
 
 
 function aname(){
-	location.href="main.jsp/#chart"
+	 location.href="./goMain.do#chart123"
 
 }
+
+function aname2(){
+	 location.href="./goMain.do#map123"
+
+}
+
+
+function dis_non() {
+  document.getElementsByClassName("typing_demo_in")[0].style.display="none";
+  
+}
+self.setTimeout("dis_non()",7000); // 1초: 1000
+
+
+
+
+
+
+
+
+

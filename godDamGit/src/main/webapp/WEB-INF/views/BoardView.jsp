@@ -32,7 +32,7 @@
             
             <div class="board_view">
                 <div class="title headline2">
-                    글 제목이 들어갑니다.
+                    <%= board.getBook_title() %>
                 </div>
                 
                 <div class="info">
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="page headline3">
-                    <img src="<%= board.getBook_img() %>" alt="이미지가 없습니다" class="left_img">
+                    <img src="images/<%= board.getBook_img() %>" alt="이미지가 없습니다" class="left_img">
                     <div class="spacing"></div>
 					<%= board.getBook_content() %>
                 </div>
@@ -64,7 +64,7 @@
             
             <div class="bt_wrap">
                 <a href="GoBoard.do" class="on headline1 arp3">목록</a>
-                <a href="BoardEdit.do?rnum=<%=board.getRnum()%>" class="on2 headline1 arp3">수정</a>
+                <a href="BoardEdit.do?seq=<%=board.getBook_seq()%>&img=<%=board.getBook_img()%>" class="on2 headline1 arp3">수정</a>
             </div>
 
             

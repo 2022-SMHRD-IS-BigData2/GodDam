@@ -17,20 +17,19 @@ public class BoardEdit1con implements Controller {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//데이터 수집
-				int rnum =1;
+				int book_seq =1;
 				
 				System.out.println("오류1");
-				
-				String asd = request.getParameter("num");
+				String asd = request.getParameter("seq");
 				if (asd != null) {
-					rnum = Integer.parseInt(asd);
+					book_seq = Integer.parseInt(asd);
 				}
 				
-				System.out.println("오류2"+rnum);
+				System.out.println("오류2"+book_seq);
 				
 				// DAO
 				BoardDAO dao = new BoardDAO();
-				BoardDTO board = dao.BoardEditView(rnum);
+				BoardDTO board = dao.BoardEditView(book_seq);
 				
 				// 객체 바인딩
 				request.setAttribute("board1", board);
