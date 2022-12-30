@@ -485,6 +485,15 @@ text-decoration: none !important;
 color:black !important;
 }
 
+a{
+	text-decoration: none black;
+	
+}
+
+a:visited {
+	text-decoration: none !important;
+	color:black !important;
+}
 
 .logname_in {
     position: relative;
