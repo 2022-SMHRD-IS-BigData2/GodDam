@@ -788,16 +788,15 @@ P4titleList[3] = "“국민일보 광주지역 극심한 가뭄에 소방용수 
 
 P4contentList[0] = "광주시는 수돗물을 전년 동기 대비 40%까지 절감한 가구에 최고 13%까지 한시적으로 상수도 요금을 감면한다고 11일 밝혔다. 지방자치단체가 10% 이상 공공요금을 감면하는 정책을 내놓은 것은 처음이다. 광주시의 이번 대책은 남부지방의 극심한 가뭄 때문이다."
 P4contentList[1] = "광주시는 지난달 24∼28일 시민정책참여단 1만9406명을 대상으로 가뭄대책 및 물 절약 실천에 대한 온라인 설문조사를 했다. 가뭄 상황 인식 정도를 묻는 질문에 2277명 중 2226명(97.7%)이 “가뭄의 심각성을 알고 있다. 절수운동에 참여하겠다”고 답했다."
-P4contentList[2] = "호남 지방에 연일 폭설이 내렸음에도 불구하고 최악의 가뭄이 지속되고 있다. 이중 전남의 21일까지 연간 누적 강수량은 838.6mm로 기상 관측 시작 이래 두번째로 적다. 주요 수원지의 저수율은 평년 대비 절반 수준으로, 한반도 기후 특성상 가장 저수율이 낮은 시기인 장마 직전 시기 저수율보다도 낮다."
+P4contentList[2] = "호남 지방에 연일 폭설이 내렸음에도 최악의 가뭄이 지속되고 있다. 이중 전남의 21일까지 연간 누적 강수량은 838.6mm로 기상 관측 시작 이래 두번째로 적다. 저수율은 평년 대비 절반 수준으로, 가장 저수율이 낮은 시기인 장마 직전 시기 저수율보다도 낮다."
 P4contentList[3] = "광주 지역에 닥친 최악의 가뭄으로 소방용수 확보에 빨간불이 켜졌다. 소방펌프차는 화재 출동시 보통 1대당 2000∼3000ℓ정도의 물을 채워가도 관창 크기에 따라 5~10분이면 바닥난다."
 
 
 window.onload = function() {
 	var ranIndex =Math.floor(Math.random()*4)
 
-    document.querySelector('.foo').innerHTML = fooList[ranIndex];
-    document.querySelector('.textbox_in').innerHTML ="";
-    document.querySelector('.textbox2_in').innerHTML ="";
+    document.querySelector('.textbox_in').innerHTML = P4titleList[ranIndex];
+    document.querySelector('.textbox2_in').innerHTML = P4contentList[ranIndex];
     }
 
 

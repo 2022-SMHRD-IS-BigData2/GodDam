@@ -1017,13 +1017,18 @@ headline1:hover {
 
 .imglist_in{
 	display: none;
+		height:0px;
+	
 }
 .Titlelist_in{
 	display: none;
+		height:0px;
+	
 }
 
 .Namelist_in{
 	display: none;
+	height:0px;
 }
 
 .fin_in {

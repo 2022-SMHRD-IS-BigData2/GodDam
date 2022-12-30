@@ -1,5 +1,6 @@
 package com.smhrd.controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -16,8 +17,14 @@ public class BoardWriteCon implements Controller {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String savePath = request.getServletContext().getRealPath("images");
+		//String savePath = request.getServletContext().getRealPath("images");
 		
+		String savePath = request.getServletContext().getRealPath("images");
+	 
+		   
+	   
+	   
+	   
 		// 최대 사이즈 : byte 단위
 		int maxSize = 5*1024*1024; // 5메가 바이트
 		
