@@ -3,7 +3,7 @@ function dis_non() {
   document.getElementsByClassName("typing_demo")[0].style.display="none";
   
 }
-self.setTimeout("dis_non()",3900); // 1초: 1000
+self.setTimeout("dis_non()",6900); // 1초: 1000
 
 //setTimeout(".typing_demo_in",2000)
 

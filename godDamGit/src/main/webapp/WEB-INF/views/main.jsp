@@ -222,7 +222,7 @@
         <div name="main_part ">
     
             <div class="part1 scrllap_ap" id="map123">
-            <div id="map" style="width:90%;height:800px;"></div><!-- 1226 우종빈 -->
+            <div class="map_o" id="map" style="width:90%;height:750px;border:4px solid black;bottom:30px"></div><!-- 1226 우종빈 -->
             </div>
         
         <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 시작 --%>

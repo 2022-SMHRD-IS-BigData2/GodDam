@@ -517,11 +517,11 @@ footer {height: 50vh} */
 
 .typing_demo {
 	height: 20px;
-	width: 130PX;
+	width: 250PX;
 	bottom: 45px;
 	right: 10px;
 	position: absolute;
-	animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+	animation: typing 3.8s steps(22), blink .55s step-end infinite alternate;
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: 2px solid;
@@ -1050,3 +1050,16 @@ headline1:hover {
 	margin-top: 5px;
 
 }
+
+
+.map_o {
+	filter:grayscale(40%);
+	
+	
+}
+.map_o:hover{
+	filter:grayscale(0%);
+}
+
+
+
