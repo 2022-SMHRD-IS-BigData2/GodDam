@@ -519,7 +519,7 @@ $.ajax({
             rsqty.push(list[i].rsqty);
             rsrt.push(list[i].rsrt);
             iqty.push(list[i].iqty);
-            tdqty.push(list[i].tdqty);
+            tdqty.push(list[i].itqty);
             }
             const ctx = document.getElementById('myChart');
             new Chart(ctx, {
