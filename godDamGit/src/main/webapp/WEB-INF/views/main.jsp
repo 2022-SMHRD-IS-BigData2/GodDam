@@ -55,6 +55,7 @@
 		.overlaybox ul {width:130px;}
 		.overlaybox li {position:relative;margin-bottom:2px;background:#FFFFFF;padding:4px 10px;color:#aaabaf;line-height: normal;}
 		.overlaybox li span {display:inline-block;}
+		.collumn4{ position: relative; top: 30px}
 	</style>
     
    <%-- 1227 안형철 : 달력용 jquery 추가 시작 --%>
