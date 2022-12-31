@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.entity.BoardDTO"%>
 <%@page import="java.util.List"%>
@@ -79,7 +80,7 @@
 </head>
 <body>
 	<!-- 게시판 데이터를 가져오기 위한 것 12-29 일남 -->
-	<% List<BoardDTO> PicList = (List<BoardDTO>)request.getAttribute("Boardlist"); %>
+	<% List<BoardDTO> PicList = (List<BoardDTO>)request.getAttribute("Boardlist6"); %>
 
 
 	<div class=""></div>
@@ -500,21 +501,14 @@
         </div>
 
     </section> 
-    		<%int PicSize=PicList.size();%>
     
     
     			<%
-    			ArrayList<String> Picimg = new ArrayList<>();
-    			ArrayList<String> Picid = new ArrayList<>();
-    			ArrayList<String> PicTitle = new ArrayList<>();
+    			Random rd= new Random();
+    			int ran= rd.nextInt(6);
+    			String realPath="http://localhost:8083/godDamGit/images/";
     			
     			
-    			for(int i=0; i<PicSize; i++) {
-    			Picimg.add(PicList.get(i).getBook_img());
-    			Picid.add(PicList.get(i).getBook_id());
-    			PicTitle.add(PicList.get(i).getBook_title());
-    			
-    			}
     		    /* Random random = new Random();
     	        int randomIndex = random.nextInt(Picimg.size());
     			
@@ -523,9 +517,6 @@
     			%>
     			<!-- 여기까지는 된다 값을 출력해보면 들어간 것을 확인-->
     			
-    			<div class="imglist_in" id="imglist_in"><%=Picimg%></div>
-    			<div class="Namelist_in" id="Namelist_in"><%=Picid%></div>
-    			<div class="Titlelist_in" id="Titlelist_in"><%=PicTitle%></div>
 
       <section class="section4 scrllap_ap">
         <!-- 메인파트 아랫공간때문에 따로 css 추가됨 -->
@@ -544,11 +535,11 @@
              <div class="box_in">
                 <div class="card_in" onclick="ranPhoto()">
                     <div class="imgBx_in">
-                        <img id="b" class=clikPic src="http://www.mdilbo.com/lib/thumb.html?type=file&w=500&src=202211/29/20221129160532949562.jpg"
+                        <img id="b" class=clikPic src="<%=realPath+PicList.get(ran).getBook_img() %>"
                             alt="images">
                     </div>
                     <div class="details_in">
-                        <h2 id="c_in2">JongBin is Famous<br></h2><h2 id="c_in1" class="fin_in">Hansot Director</h2>
+                        <h2 id="c_in2"><%=PicList.get(ran).getBook_id() %> is Famous<br></h2><h2 id="c_in1" class="fin_in">Hansot Director</h2>
                     </div>
                 </div>
             </div> 
@@ -570,12 +561,12 @@
                     
                     <div class="icon_in"></div>
                     <div class="textbox_in">
-                    " 경찰서에 구금됐다가 검찰로 송치된 사람은 어떤 처분을 받게 될까? 
+                    <%=PicList.get(ran).getBook_title() %> 
                     </div>
                     
                 </div>
                 <div class="textbox2_in">
-                    스크롤트리거로 오른쪽에서 왼쪽 이동시켜보자 그리고 전체 이동할 필요없이 오른쪽에 이펙트를 넣는 것도 고려해볼만 하다. 하지만 일반적으로는 전체적으로 중앙이동해서 자리를 잡는 것이 안정감있고 사이트 전체의 통일성을 위해서 좋을지도 모른다
+                    <%=PicList.get(ran).getBook_content() %>
                 </div>
 
 

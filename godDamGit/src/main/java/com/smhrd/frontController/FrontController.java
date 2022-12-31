@@ -28,6 +28,7 @@ import com.smhrd.controller.GoRuleCon;
 import com.smhrd.controller.GoWindowCon;
 import com.smhrd.controller.LastDamCon;
 import com.smhrd.controller.MapDamCon;
+import com.smhrd.controller.PicList6Con;
 import com.smhrd.controller.SelectDayCon;
 //
 @WebServlet("*.do") // .do로 끝나는 모든 요청을 받아온다.
@@ -55,6 +56,7 @@ public class FrontController extends HttpServlet {
 		handlerMapping.put("/SelectDay.do", new SelectDayCon());// 1223 우종빈, ajax통신용 해시맵 객체 추가
 		handlerMapping.put("/DetailDay.do", new DetailDayCon());// 1228 안형철, ajax통신용 해시맵 객체 추가
 		handlerMapping.put("/DetailMonth.do", new DetailMonthCon());// 1229 안형철, ajax통신용 해시맵 객체 추가
+		handlerMapping.put("/PicList6.do", new PicList6Con());
 //		
 //		// .put(Key,Value);
 		handlerMapping.put("/goMain.do", new GoMainCon());

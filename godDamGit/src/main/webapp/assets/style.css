@@ -729,6 +729,9 @@ footer {height: 50vh} */
 	font-weight: 600;
 	text-transform: uppercase;
 	transition: ease-in-out 4s;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*white-space:nowrap;*/  /*1231 우종빈 텍스트박스 넘침 막음*/
 }
 
 .textbox2_in {
@@ -743,6 +746,9 @@ footer {height: 50vh} */
 	font-weight: 600;
 	text-transform: uppercase;
 	transition: ease-in-out 5s;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*white-space:nowrap;*/ /*1231 우종빈 텍스트 넘침 막음*/
 }
 
 .num_right_in {

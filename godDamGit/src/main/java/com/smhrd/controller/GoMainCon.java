@@ -29,9 +29,9 @@ public class GoMainCon implements Controller{
 		// 1229 메인페이지에 게시판 데이터 가져오기 일남
 		
 		BoardDAO dao = new BoardDAO(); 
-		List<BoardDTO> Boardlist = dao.BoardList();
+		List<BoardDTO> Boardlist = dao.BoardList6();
 		
-		request.setAttribute("Boardlist", Boardlist);
+		request.setAttribute("Boardlist6", Boardlist);
 		
 		return "main";
 

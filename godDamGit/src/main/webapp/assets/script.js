@@ -562,131 +562,6 @@ $.ajax({
 /* 1223 김민석 차트 js 추가 */
 
 
-/* 221226 최일남 js 사진페이지 버튼 */
-
-var ak1 = '<i class="fa-sharp fa-solid fa-circle-dot"></i> <i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle"></i>'
-var ak2 = '<i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle-dot"></i>'
-var ak3 = '<i class="fa-sharp fa-solid fa-circle"></i> <i class="fa-sharp fa-solid fa-circle-dot"></i> <i class="fa-sharp fa-solid fa-circle"></i>'
-
-var testimg = 'https://i.pinimg.com/564x/4c/fc/b0/4cfcb0cb3a4a4a18656c4fb7e1481f35.jpg'
-var testimg2 = 'https://i.pinimg.com/564x/a5/9b/a9/a59ba9009b7a9337074795578cddc6e8.jpg'
-
-var cat = document.querySelector('#b')
-
-var testlist = [testimg, testimg2]
-var templist = [ak1, ak2, ak3]
-
-$('body').on('keydown', function (event) {
-  
-  	const photo = document.querySelectorAll('.imglist_in')
-	const name = document.querySelectorAll('.Namelist_in')
-	const title = document.querySelectorAll('.Titlelist_in')
-	//const ranPhotor
-	var asd = photo[0].innerHTML.replace("[","").replace("]","").split(", ")
-	var asd2 = name[0].innerHTML.replace("[","").replace("]","").split(", ")
-	var asd3 = title[0].innerHTML.replace("[","").replace("]","").split(", ")
-	
-	var ranIndex =Math.floor(Math.random()*asd.length)
-	
-  function movelr(e) {
-    if (e == 37) {
-        $('#ab').html(templist[0])
-     	document.getElementById("b").src = asd[ranIndex]
-		document.getElementById("c_in1").innerHTML = asd2[ranIndex]
-		document.getElementById("c_in2").innerHTML = asd3[ranIndex]
-		document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
-    }else if (e == 39) {
-      $('#ab').html(templist[1])
-    		document.getElementById("b").src = asd[ranIndex]
-		document.getElementById("c_in1").innerHTML = asd2[ranIndex]
-		document.getElementById("c_in2").innerHTML = asd3[ranIndex]
-		document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
-
-    }
-  }
-
-  function resetc() {
-    $('#ab').html(templist[2])
-  }
-  
-
-
-  movelr(event.keyCode);
-  setTimeout(resetc,0200);
-
-
-})
-
-
- // 1초: 1000
-
-
-
-
-// 수정중...
-
-
- //var tmp1 = '${변수}'; 
-//var PicS = <%=PicSize%>;
-
-var imgArray= new Array();
-var nameArray= new Array();
-var titleArray= new Array();
-//   imgArray.push("<%=Picimg%>")
-//   nameArray.push("<%=Picid%>")
-//   titleArray.push("PicTitle")
- 
- 
-
-
-let clicky = document.querySelector(".clikPic");
-
-//clicky.addEventListenr("click", function() {
-//var result = Math.floor( ( Math.random() * PicS ) )
-//click.setAttribute("src", imgArray[result])
-	
-//})
-
-//clicky.addEventListener("click", ranPhoto(adres) {
-	
-//	return adres;
-//})
-/*
-function changePhoto(adres) {
-
-	
-	ranPhoto.src = 'Pic_photo.jpg'
-}
-
-clicky.addEventListener("click", () => {
-	
-	changePhoto(imglist_in)
-})
-
-*/
-// var adres = document.getElementById('imglist_in').innerText
-
-function ranPhoto() {
-	
-	const photo = document.querySelectorAll('.imglist_in')
-	const name = document.querySelectorAll('.Namelist_in')
-	const title = document.querySelectorAll('.Titlelist_in')
-	//const ranPhotor
-	var asd = photo[0].innerHTML.replace("[","").replace("]","").split(", ")
-	var asd2 = name[0].innerHTML.replace("[","").replace("]","").split(", ")
-	var asd3 = title[0].innerHTML.replace("[","").replace("]","").split(", ")
-	
-	var ranIndex =Math.floor(Math.random()*asd.length)
-	
-	document.getElementById("b").src = asd[ranIndex]
-	document.getElementById("c_in1").innerHTML = asd2[ranIndex]
-	document.getElementById("c_in2").innerHTML = asd3[ranIndex]
-	document.getElementsByClassName("logname_in").innerHTML = asd3[ranIndex]
-	
-	
-	console.log(title)
-	console.log(asd[ranIndex])
-}
 
 
 
@@ -759,49 +634,27 @@ jQuery(document).ready(function($){
 
 
 
-
-// 일남 로딩될 때 글씨 변경
-
-
-var fooList = []
-			
-			
-var fooList0 = "눈이 많이오더라도.... 저수량에 미치는 영향은 미미합니다"
-var fooList1 = "가뭄 극심' 광주 상수원 바닥....30년만에 제한급수 위기"
-var fooList2 = "광주....50년 만에 최악의 가뭄위기"
-var fooList3 = "농업용수와 공업용수는 물론.... 식수와 생활용수마저도 곧 고갈될 위기"
-
-fooList[0] = "<div><marquee>"+fooList0+"</marquee></div>"
-fooList[1] = "<div><marquee>"+fooList1+"</marquee></div>"
-fooList[2] = "<div><marquee>"+fooList2+"</marquee></div>"
-fooList[3] = "<div><marquee>"+fooList3+"</marquee></div>"
+const realPath="http://localhost:8083/godDamGit/images/";
 
 
-var P4titleList = []
-var P4contentList = []
-
-P4titleList[0] = "“경향신문 광주시 “물 아껴쓰면 수도세 감면”"
-P4titleList[1] = "“동아일보 광주 시민 98% “겨울 가뭄 심각… 물절약 운동 실천하겠다” "
-P4titleList[2] = "“한국일보 폭설로도 채워지지 않는 지독한 겨울가뭄"
-P4titleList[3] = "“국민일보 광주지역 극심한 가뭄에 소방용수 확보도 ‘적색 경보’"
-
-
-P4contentList[0] = "광주시는 수돗물을 전년 동기 대비 40%까지 절감한 가구에 최고 13%까지 한시적으로 상수도 요금을 감면한다고 11일 밝혔다. 지방자치단체가 10% 이상 공공요금을 감면하는 정책을 내놓은 것은 처음이다. 광주시의 이번 대책은 남부지방의 극심한 가뭄 때문이다."
-P4contentList[1] = "광주시는 지난달 24∼28일 시민정책참여단 1만9406명을 대상으로 가뭄대책 및 물 절약 실천에 대한 온라인 설문조사를 했다. 가뭄 상황 인식 정도를 묻는 질문에 2277명 중 2226명(97.7%)이 “가뭄의 심각성을 알고 있다. 절수운동에 참여하겠다”고 답했다."
-P4contentList[2] = "호남 지방에 연일 폭설이 내렸음에도 최악의 가뭄이 지속되고 있다. 이중 전남의 21일까지 연간 누적 강수량은 838.6mm로 기상 관측 시작 이래 두번째로 적다. 저수율은 평년 대비 절반 수준으로, 가장 저수율이 낮은 시기인 장마 직전 시기 저수율보다도 낮다."
-P4contentList[3] = "광주 지역에 닥친 최악의 가뭄으로 소방용수 확보에 빨간불이 켜졌다. 소방펌프차는 화재 출동시 보통 1대당 2000∼3000ℓ정도의 물을 채워가도 관창 크기에 따라 5~10분이면 바닥난다."
-
-
-window.onload = function() {
-	var ranIndex =Math.floor(Math.random()*4)
-
-    document.querySelector('.textbox_in').innerHTML = P4titleList[ranIndex];
-    document.querySelector('.textbox2_in').innerHTML = P4contentList[ranIndex];
-    }
-
-
-
-
-
-
-
+function ranPhoto(){
+	$.ajax({
+		url: "PicList6.do",
+		type: "post",
+		dataType: "json",
+		
+		success: function(res) {
+			var ran=Math.floor(Math.random()*7);
+			console.log(res[0]);
+			$(`#b`).attr("src", realPath+res[ran].book_img);
+			$(`body > div.scrollap > section.section4.scrllap_ap > div 
+			> div.part2_in.scrllap_ap > div.right_area_in > div.graybox_in > div.textbox_in`).html(res[ran].book_title)
+			$(`body > div.scrollap > section.section4.scrllap_ap > 
+			div > div.part2_in.scrllap_ap > div.right_area_in > div.textbox2_in`).html(res[ran].book_content)
+			$(`#c_in2`).html(res[ran].book_id+" is Famous")
+			},
+			erro: function() {
+			console.log('요청실패!');
+		}
+	})
+};
