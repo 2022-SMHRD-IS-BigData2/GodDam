@@ -262,7 +262,7 @@
         <div class="part1_in2 scrllap_ap" >
         		 <div class="in_rule_title headline1_in2">Water saving</div>
   <div class="part1_rule_in">
-  <h1 class="in_rule_h1">BEST3 WAYS</h1>
+  <h1 id="3page" class="in_rule_h1">BEST3 WAYS</h1>
   <div class="rule_card in_rule1"><img class="in_rule_img" src="./assets/img/shower.png" alt="shower"/>
     <div class="in_rule_text">
       <h2 class="in_rule_h2" data-splitting="">샤워시간<br> 줄이기</h2>
