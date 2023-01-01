@@ -289,42 +289,42 @@
       <form action="" method="post">
         <p>
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10" >
           <label>양치컵을 사용하시나요?</label>
         </div>
   
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10" >
           <label>샤워시간은 10분이내인가요?</label>
         </div>
   
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10" >
           <label>샤워하는 도중에 물을 잠그시나요?</label>
         </div>
   
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10" >
           <label>절수형 샤워헤드를 사용하시나요?</label>
         </div>
 
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10" >
           <label>설거지통을 사용하시나요?</label>
         </div>
 
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="20">
           <label>식기세척기를 사용하시나요?</label>
         </div>
 
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="10">
           <label>세탁물을 모아서 세탁하시나요?</label>
         </div>
 
         <div class="field11">
-          <input class="asdft" type="checkbox" />
+          <input class="asdft" type="checkbox" value="20">
           <label>세탁시 추가 헹굼을 하시나요?</label>
         </div>
         </p>
