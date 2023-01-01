@@ -21,6 +21,12 @@
     <title>Newspaper Style Design Experiment</title>
     <meta name="viewport" content="width=device-width">
 
+	<!-- 일남 마지막추가 -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+  	
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
@@ -111,22 +117,22 @@
                 </header>
                 
          <%-- 1228 김민석: 방문자 추가 --%>
-             <div style="display: inline-block; margin: 0 5px;  float: right;
-             border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+             <div class="downbox" style="display: inline-block; margin: 0 5px;  float: right; position:relative;
+             border: 3px solid cornflowerblue; border-radius: 8px;  font-size:18px; 
              padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>1인당 물 사용량 <img class="Wimg4" src="./assets/img/water4.png"></div>
 				<div class="">302.2(-<img class="Wimg1" src="./assets/img/water1.png">3)</div>
 				
 			</div>
-			<div style="display: inline-block; margin: 0 5px;  float: right;
-			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+			<div class="downbox"  style="display: inline-block; margin: 0 5px;  float: right; position:relative;
+			 border: 3px solid cornflowerblue; border-radius: 8px;  font-size:18px; 
 			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>전체 방문자 <img class="Wimg2" src="./assets/img/water2.png"></div>
 				<div class=""><%=session.getAttribute("ttlday") %>(+<%=session.getAttribute("today")%>)</div>
 				
 			</div>
-			<div style="display: inline-block; margin: 0 5px;  float: right;
-			 border: 3px solid cornflowerblue; border-radius: 10px; font-size:18px; 
+			<div class="downbox" style="display: inline-block; margin: 0 5px;  float: right; position:relative;
+			 border: 3px solid cornflowerblue; border-radius: 8px; font-size:18px; 
 			 padding: 10px; font-family: 'Noto Sans KR', sans-serif;">
 				<div>오늘 방문자 <img class="Wimg3" src="./assets/img/water3.png"></div>
 				<div class=""><%=session.getAttribute("today") %> </div>
@@ -136,7 +142,7 @@
                 <!-- 이스터에그 -->
                 <span class="logname">
                 <div class="typing_demo">
-                    조요한님 안녕하세요
+                    물 절약을 위해 오셨군요.. 환영합니다..
                 </div>
                 </span>
 
@@ -159,7 +165,7 @@
         </div> <!-- .head -->
         
         <section class="section1" id="chart123">
-        <div name="main_part">
+        <div name="main_part" >
             <div class="part1 scrllap_ap">
             <%-- 1223 김민석: 메인 차트 추가 --%>
               	<div id="tit1" style="font-family: 'Hi Melody', cursive; font-size:60px;">주암댐 저수율 전년도 비교</div>
@@ -220,7 +226,7 @@
 
     </section> <!-- 세션1 끝 -->
     <section class="section2">
-        <div name="main_part ">
+        <div name="main_part">
     
             <div class="part1 scrllap_ap" id="map123">
             <div class="map_o" id="map" style="width:90%;height:750px;border:4px solid black;bottom:30px"></div><!-- 1226 우종빈 -->
@@ -249,260 +255,108 @@
         <%--1227 안형철 댐 기간 선택 태그 받아서 차트 만드는거 시공중 끝 --%>  
         </div>
     </section>
-
-    <section class="section3">
-        <div name="main_part"></div>
-        <div class="part1 scrllap_ap" style="position: relative;
-    top: -30px;">
-         <div class="savewater_div_title"style="height:5%;width:100%;align-items: center;display: flex;background-color:gray; ">
-        <h1 style="align-items: center;position: relative;text-align: center;">물 절약 방법 best 3</h1>
-        <a style="position: relative;right:-50px" href="GoRule.do">상세 수칙 보러가기</a>
-        </div>
-        <div class="savewater_div" style="height: 30%;width:100%;display:flex;position: relative;">
-        	<div style="height: 100%;width:40%;">
-
-					<img alt="" src="./assets/img/h4.png" style="width: 100%;height: 100%;position: relative;">
-       	
-        	</div>
-        	 <div style="height: 100%;width:60%; ">
-				<div class="savewater_div2" style="height: 100%;width:100%;background-color:gray;position: relative;top:-16px">
-					<div style="height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>머리 감을 때,비누질 할 때 수도를 잠그는 것으로</h3>
-						<h2 class="savewater" style="position: relative;text-align: center;">하루 30 L의 물을 아낄 수 있습니다!</h2>
-						<br>
-						<h3 class="savewater" style="position: relative;text-align: center;">추가로 샤워시간을 줄일 때마다</h3>
-						<h2 class="savewater" style="position: relative;text-align: center;">1분당 12 L의 물절약이 가능합니다!</h2>
-					</div>
-				</div>        	
-        	</div>
-        </div>
-        <div class="savewater_div" style="height: 30%;width:100%;display:flex;position: relative;">
-        	<div style="height: 100%;width:40%;">
-				<div style="height: 100%;width:100%; background-color: whitesmoke;">
-					<img alt="" src="./assets/img/h5.png" style="width: 100%;height: 100%;position: relative;">
-				</div>        	
-        	</div>
-        	 <div style="height: 100%;width:60%;">
-				<div class="savewater_div2" style="height: 100%;width:100%;background-color:gray;position: relative;top:-16px">
-					<div class="savewater_div3" style="	height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>행굼을 두 번 한다고 세탁이 잘되진 않습니다.</h3>
-						<h2 class="savewater" style="position: relative;text-align: center;">10kg 세탁기 행굼 한번에 90L 사용! </h2>
-						<br>
-						<h3 class="savewater" style="position: relative;text-align: center;">세탁 효과를 높이기 위해선 세탁기 용량의</h3>
-						<h3 class="savewater" style="position: relative;text-align: center;">절반 정도에서 하는것이 좋습니다!</h3>
-					</div>  
-				</div>      	
-        	</div>
-        </div>
-        <div class="savewater_div" style="height: 30%;width:100%;display:flex;position: relative;">
-        	<div style="height: 100%;width:40%;">
-				<div style="height: 100%;width:100%; background-color: whitesmoke;">
-					<img alt="" src="./assets/img/h2.png" style="width: 100%;height: 100%;position: relative;">
-				</div>        	
-        	</div>
-        	 <div style="height: 100%;width:60%;">
-				<div class="savewater_div2" style="height:100%;width:100%;background-color:gray;position: relative;top:-16px">
-					<div class="savewater_div3" style="	height: 100%;width:100%; background-color:white;position: relative;">
-						<h3 class="savewater" style="position: relative;text-align: center;"><br><br><br>양치하며 물을 틀어두시나요?</h3>
-						<h2 class="savewater" style="position: relative;text-align: center">양치컵 사용시 회당 5L 이상 절약!</h2>
-						<br>
-						<h3 class="savewater" style="position: relative;text-align: center;">공공장소에서도 수도를 계속 쓰시기보다</h3>
-						<h3 class="savewater" style="position: relative;text-align: center;">양치컵을 사용하시면 점심시간에</h3>
-						<h3 class="savewater" style="position: relative;text-align: center;">줄 서는 시간을 줄일 수 있습니다.</h3>
-					</div>
-				</div>        	
-        	</div>
-        </div>
-        </div>
-        <div id="3page" class="part2 scrllap_ap">
-
-   <table border="1" align="center" bgcolor="whitesmoke">
-        <tr height="40" bgcolor="gray">
-            <td colspan="2" height="35"> 
-                <font size="5"><h4 align="center"> 물절약 자가진단<div style="display: inline-flex; position:relative;top: 10px;">
-                <img style="width:45px;position: relative; left:10px;" src="./assets/img/100.png" alt="" ></div></h4></font>
-            </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-             &nbsp;&nbsp; ▶&nbsp;&nbsp; 1인 가구이신가요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-                <input type="radio" name="question 1" class="question 1" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 1" class="question 1" value="아니요">
-           </td>
-        </tr>
-
-        <tr height="50" bgcolor="gray">
-            <td colspan="2"><h4>step1 : 욕실에서</h4></td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-              &nbsp;&nbsp; ▶&nbsp;&nbsp; 샤워시간은 어느정도신가요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5분이내&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;10분&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15분&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20분 &nbsp;&nbsp;&nbsp;30분이상&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-                <input type="radio" name="question 2" class="question 2" value="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 2" class="question 2" value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 2" class="question 2" value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 2" class="question 2" value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 2" class="question no 2" value="30">
-           </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-                &nbsp;&nbsp; ▶&nbsp;&nbsp; 머리감을 때와 비누질할 때 물을 잠그시나요?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 3" class="question 3" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 3" class="question no 3" value="아니요">
-           </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-               &nbsp;&nbsp; ▶&nbsp;&nbsp; 절수형 샤워헤드를 사용하시나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 4" class="question 4" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 4" class="question no 4" value="아니요">
-           </td>
-        </tr>
-        <tr height="50" bgcolor="gray">
-            <td colspan="2"><h4>step2 : 화장실에서</h4></td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-              &nbsp;&nbsp; ▶&nbsp;&nbsp; 변기 수조에 물병을 넣으셨나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 5" class="question 5" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 5" class="question no 5" value="아니요">
-           </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-             &nbsp;&nbsp; ▶&nbsp;&nbsp; 양치컵을 사용하시나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 6" class="question 6" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 6" class="question no 6" value="아니요">
-           </td>
-        </tr>
-        <tr height="50" bgcolor="gray">
-            <td colspan="2"><h4>step3 : 부엌에서</h4></td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-             &nbsp;&nbsp; ▶&nbsp;&nbsp; 설거지통을 사용하시나요?
-            </td align="center">
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 7" class="question 7" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 7" class="question no 7" value="아니요">
-           </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-               &nbsp;&nbsp; ▶&nbsp;&nbsp; 식기세척기를 사용하시나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 8" class="question 8" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 8" class="question 8" value="아니요">
-           </td>
-        </tr>
-        <tr height="50" bgcolor="gray">
-            <td colspan="2"><h4>step4 : 세탁실에서</h4></td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-               &nbsp;&nbsp; ▶&nbsp;&nbsp; 세탁은 며칠마다 하시나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;하루&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;이틀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;사흘&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;나흘&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;닷새
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-                &nbsp;&nbsp;<input type="radio" name="question 9" class="question no 9" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question no 9" value="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question 9" value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question 9" value="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="question 9" class="question 9" value="5">
-           </td>
-        </tr>
-        <tr >
-            <td rowspan="2">
-              &nbsp;&nbsp; ▶&nbsp;&nbsp; 세탁시 추가 헹굼을 하시나요?
-            </td>
-            <td colspan="" align="center">
-                &nbsp;&nbsp;&nbsp;네&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아니요
-            </td>
-        </tr>
-        <tr>
-           <td align="center">
-            <input type="radio" name="question 10" class="question no 10" value="네">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="question 10" class="question 10" value="아니요">
-           </td>
-        </tr>
-       
-        <tr align="center">
-        <tr height="50">
-            <td  colspan="2" align="center">
-                <input id="testsubmit"type="submit" value="제출">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" id=checkreset value="초기화">
-            </td>
-        </tr>
-    </table>
     
     
+ <section class="section3">
+        <div name="main_part scrllap_ap">
+        <div class="part1_in2 scrllap_ap" >
+        		 <div class="in_rule_title headline1_in2">Water saving</div>
+  <div class="part1_rule_in">
+  <h1 class="in_rule_h1">BEST3 WAYS</h1>
+  <div class="rule_card in_rule1"><img class="in_rule_img" src="./assets/img/shower.png" alt="shower"/>
+    <div class="in_rule_text">
+      <h2 class="in_rule_h2" data-splitting="">샤워시간<br> 줄이기</h2>
+      <p class="in_rule_p" data-splitting="">샤워 할 때 수도를 잠그는 것으로 하루 <strong>30L</strong>의 물을 아낄 수 있습니다. 또한 시간을 1분 줄일 때마다 <strong>12L</strong>의 물절약이 가능합니다.</p>
+    </div>
+  </div>
+  
+  <div class="rule_card in_rule2"><img class="in_rule_img" src="./assets/img/washer.png" alt="washer"/>
+    <div class="in_rule_text">
+      <h2 class="in_rule_h2" data-splitting="">빨래 모아<br> 돌리기</h2>
+      <p class="in_rule_p" data-splitting="">10kg 세탁기 행굼 한번에 평균 <strong>90L</strong>를 사용합니다. 세탁 효과를 높이기 위해선 세탁기 용량의 절반정도만 하는것이 좋습니다.</p>
+    </div>
+  </div>
+  
+  <div class="rule_card in_rule3"><img class="in_rule_img" src="./assets/img/toothpaste.png" alt="toothpaste"/>
+    <div class="in_rule_text">
+      <h2 class="in_rule_h2" data-splitting="">양치시 컵사용</h2>
+      <p class="in_rule_p" data-splitting="">양치컵 사용시 회당 <strong>5L</strong> 이상 절약가능합니다. 공공장소에서도 수도를 계속 틀기보다 양치컵을 사용하면 점심시간에 줄 서는 시간을 줄일 수 있습니다.</p>
+    </div>
+  </div>
+  
+  <div class="rule_card2 in_rule3">
+    <div class="in_rule_text">
+      <form action="" method="post">
+        <p>
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>양치컵을 사용하시나요?</label>
+        </div>
+  
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>샤워시간은 10분이내인가요?</label>
+        </div>
+  
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>샤워하는 도중에 물을 잠그시나요?</label>
+        </div>
+  
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>절수형 샤워헤드를 사용하시나요?</label>
+        </div>
 
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>설거지통을 사용하시나요?</label>
+        </div>
 
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>식기세척기를 사용하시나요?</label>
+        </div>
+
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>세탁물을 모아서 세탁하시나요?</label>
+        </div>
+
+        <div class="field11">
+          <input class="asdft" type="checkbox" />
+          <label>세탁시 추가 헹굼을 하시나요?</label>
+        </div>
+        </p>
+
+        <input class="asdft2" type="submit" value="submit">
+      </form>
+
+    </div>
+  </div>
+  
+
+  </div>
+        
+        
+        
+        
         
         
         
         </div>
-
-    </section> 
+        </div>
+ </section> 
     
     
+    
+    
+    
+    
+    
+    
+    
+        
     			<%
     			Random rd= new Random();
     			int ran= rd.nextInt(6);
@@ -524,9 +378,9 @@
         <div class="part1_in scrllap_ap">
             
             <div class="page_top_in">
-            <div class="page_num_in headline1_in">사진
+            <div class="page_num_in headline1_in3">picture
             </div>
-            <div class="page_title_in bigName"> picture
+            <div class="page_title_in bigName2"> 
             </div>
 
             </div>
@@ -602,7 +456,7 @@
       <!-- partial -->
     
     <!-- footer 밑 자막 -->
-    <footer class="foo"><div><marquee>"눈이 많이오더라도.... 저수량에 미치는 영향은 미미합니다"</marquee></div></footer>
+    <footer class="foo"><div><marquee> </marquee></div></footer>
 
 <%--1226 김민석: 스크롤 상단 버튼 추가 --%>
 	<div style="position:fixed; bottom:55px; right:20px; z-index:99;"> 

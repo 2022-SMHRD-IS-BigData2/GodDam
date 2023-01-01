@@ -15,9 +15,20 @@ self.setTimeout("dis_non()",6900); // 1초: 1000
   sections.scrollTo(0,pos.top);
 } */
 
+function downboxr() {
+	$('.downbox').stop().animate({
+						top:50, border: 0
+					}, 500)
+}
 
 
+self.setInterval("downboxr()",8900);
 
+Splitting();
+
+function jum_in() {
+	return 10;
+}
 
 
 
@@ -658,3 +669,26 @@ function ranPhoto(){
 		}
 	})
 };
+
+
+
+
+var fooList = []
+			
+			
+var fooList0 = "눈이 많이오더라도.... 저수량에 미치는 영향은 미미합니다"
+var fooList1 = "가뭄 극심' 광주 상수원 바닥....30년만에 제한급수 위기"
+var fooList2 = "광주....50년 만에 최악의 가뭄위기"
+var fooList3 = "농업용수와 공업용수는 물론.... 식수와 생활용수마저도 곧 고갈될 위기"
+
+fooList[0] = "<div><marquee>"+fooList0+"</marquee></div>"
+fooList[1] = "<div><marquee>"+fooList1+"</marquee></div>"
+fooList[2] = "<div><marquee>"+fooList2+"</marquee></div>"
+fooList[3] = "<div><marquee>"+fooList3+"</marquee></div>"
+
+
+window.onload = function() {
+	var ranIndex =Math.floor(Math.random()*4)
+
+    document.querySelector('.foo').innerHTML = fooList[ranIndex];
+    }
